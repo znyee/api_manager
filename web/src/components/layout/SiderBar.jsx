@@ -12,7 +12,6 @@ import SkeletonWrapper from './components/SkeletonWrapper';
 import { Nav, Divider, Button } from '@douyinfe/semi-ui';
 
 const routerMap = {
-  home: '/',
   channel: '/console/channel',
   token: '/console/token',
   topup: '/console/topup',
@@ -21,7 +20,6 @@ const routerMap = {
   log: '/console/log',
   midjourney: '/console/midjourney',
   setting: '/console/setting',
-  about: '/about',
   detail: '/console',
   pricing: '/pricing',
   task: '/console/task',
@@ -41,7 +39,7 @@ const SiderBar = ({ onNavigate = () => {} }) => {
 
   const showSkeleton = useMinimumLoadingTime(sidebarLoading, 200);
 
-  const [selectedKeys, setSelectedKeys] = useState(['home']);
+  const [selectedKeys, setSelectedKeys] = useState([]);
   const [chatItems, setChatItems] = useState([]);
   const [openedKeys, setOpenedKeys] = useState([]);
   const location = useLocation();

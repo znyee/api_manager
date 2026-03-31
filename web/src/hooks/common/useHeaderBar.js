@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext, useCallback, useMemo } from 'react';
+import { useState, useEffect, useContext, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { UserContext } from '../../context/User';
@@ -31,42 +31,6 @@ export const useHeaderBar = ({ onMobileMenuToggle, drawerOpen }) => {
 
   const isSelfUseMode = statusState?.status?.self_use_mode_enabled || false;
   const isDemoSiteMode = statusState?.status?.demo_site_enabled || false;
-
-  // 获取顶栏模块配置
-  const headerNavModulesConfig = statusState?.status?.HeaderNavModules;
-
-  // 使用useMemo确保headerNavModules正确响应statusState变化
-  const headerNavModules = useMemo(() => {
-    if (headerNavModulesConfig) {
-      try {
-        const modules = JSON.parse(headerNavModulesConfig);
-
-        // 处理向后兼容性：如果pricing是boolean，转换为对象格式
-        if (typeof modules.pricing === 'boolean') {
-          modules.pricing = {
-            enabled: modules.pricing,
-            requireAuth: false, // 默认不需要登录鉴权
-          };
-        }
-
-        return modules;
-      } catch (error) {
-        console.error('解析顶栏模块配置失败:', error);
-        return null;
-      }
-    }
-    return null;
-  }, [headerNavModulesConfig]);
-
-  // 获取模型广场权限配置
-  const pricingRequireAuth = useMemo(() => {
-    if (headerNavModules?.pricing) {
-      return typeof headerNavModules.pricing === 'object'
-        ? headerNavModules.pricing.requireAuth
-        : false; // 默认不需要登录
-    }
-    return false; // 默认不需要登录
-  }, [headerNavModules]);
 
   const isConsoleRoute = location.pathname.startsWith('/console');
 
@@ -215,8 +179,6 @@ export const useHeaderBar = ({ onMobileMenuToggle, drawerOpen }) => {
     isConsoleRoute,
     theme,
     drawerOpen,
-    headerNavModules,
-    pricingRequireAuth,
 
     // Actions
     logout,
