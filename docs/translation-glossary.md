@@ -41,7 +41,6 @@ This document provides standard translation references for key terminology in th
 | 中文 | English | 说明 | Description |
 |------|---------|------|-------------|
 | 充值 | Top Up | 为账户增加额度 | Add quota to account |
-| 兑换码 | Redemption Code | 可兑换额度的代码 | Code that can be redeemed for quota |
 
 ## 渠道管理 (Channel Management)
 

@@ -45,7 +45,6 @@ This document provides standard French translations for key project terminology 
 | Chinois | Français | Anglais | Description |
 |---------|----------|---------|-------------|
 | 充值 | Recharge | Top Up | Ajout de quota au compte |
-| 兑换码 | Code d'échange | Redemption Code | Code qui peut être échangé contre du quota |
 
 ## Gestion des Canaux (Channel Management)
 

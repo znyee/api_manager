@@ -45,7 +45,6 @@ This section provides standard Russian translations for key project terminology 
 | Китайский | Русский | Английский | Описание |
 |-----------|--------|-----------|----------|
 | 充值 | Пополнение | Top Up | Добавление квоты на аккаунт |
-| 兑换码 | Код купона | Redemption Code | Код, который можно обменять на квоту |
 
 ## Управление каналами (Channel Management)
 
