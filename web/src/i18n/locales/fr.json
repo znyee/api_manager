@@ -49,7 +49,6 @@
     "5m缓存创建 {{tokens}} tokens / 1M tokens * {{symbol}}{{price}} (倍率: {{ratio}})": "Création du cache 5m {{tokens}} tokens / 1M tokens * {{symbol}}{{price}} (ratio : {{ratio}})",
     "5m缓存创建价格：{{symbol}}{{price}} * {{ratio}} = {{symbol}}{{total}} / 1M tokens (5m缓存创建倍率: {{cacheCreationRatio5m}})": "Prix de création de cache 5m : {{symbol}}{{price}} * {{ratio}} = {{symbol}}{{total}} / 1M tokens (ratio de création 5m : {{cacheCreationRatio5m}})",
     "8 - 高": "8 - Haute",
-    "AGPL v3.0协议": "Licence AGPL v3.0",
     "AI 对话": "Conversation IA",
     "AI模型测试环境": "Environnement de test de modèle d'IA",
     "AI模型配置": "Configuration du modèle d'IA",
@@ -166,7 +165,6 @@
     "LinuxDO ID": "ID LinuxDO",
     "Logo 图片地址": "Adresse de l'image du logo",
     "Midjourney 任务记录": "Tâches Midjourney",
-    "MIT许可证": "Licence MIT",
     "New API项目仓库地址：": "Adresse du référentiel du projet New API : ",
     "NewAPI 默认不会将入口请求的 User-Agent 透传到上游渠道；该条件仅用于识别访问本站点的客户端。": "NewAPI ne transmet pas le User-Agent de la requête entrante aux canaux en amont par défaut ; cette condition sert uniquement à identifier les clients accédant à ce site.",
     "OAuth Client ID": "OAuth Client ID",
@@ -1412,7 +1410,6 @@
     "按量计费": "Paiement à l'utilisation",
     "按顺序替换content中的变量占位符": "Remplacer les espaces réservés de variable dans le contenu dans l'ordre",
     "换脸": "Remplacement de visage",
-    "授权，需在遵守": " et doit être utilisé conformément au ",
     "授权失败": "Échec de l'autorisation",
     "排序": "Ordre",
     "排队中": "En file d'attente",
@@ -1736,7 +1733,6 @@
     "本月获得": "Ce mois-ci",
     "本设备：手机指纹/面容，外接：USB安全密钥": "Intégré : empreinte digitale/visage du téléphone, Externe : clé de sécurité USB",
     "本设备内置": "Intégré à cet appareil",
-    "本项目根据": "Ce projet est sous licence ",
     "机密环境变量": "Secret Environment Variables",
     "机密环境变量将被加密存储，适用于存储密码、API密钥等敏感信息。": "Secret environment variables will be stored encrypted, suitable for storing passwords, API keys and other sensitive information.",
     "机密环境变量说明": "Secret Environment Variables Description",
@@ -2104,7 +2100,6 @@
     "登录成功！": "Connexion réussie !",
     "登录过期，请重新登录！": "Session expirée, veuillez vous reconnecter !",
     "白名单": "Liste blanche",
-    "的前提下使用。": "doit être utilisé conformément aux conditions.",
     "监控设置": "Surveillance",
     "目录总大小": "Taille totale du répertoire",
     "目录文件数": "Nombre de fichiers du répertoire",
@@ -3311,3 +3306,4 @@
     "输出价格：{{symbol}}{{total}} / 1M tokens": "Prix de sortie : {{symbol}}{{total}} / 1M tokens"
   }
 }
+

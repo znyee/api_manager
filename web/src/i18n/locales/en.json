@@ -46,7 +46,6 @@
     "5m缓存创建 {{tokens}} tokens / 1M tokens * {{symbol}}{{price}} (倍率: {{ratio}})": "5m cache creation {{tokens}} tokens / 1M tokens * {{symbol}}{{price}} (ratio: {{ratio}})",
     "5m缓存创建价格：{{symbol}}{{price}} * {{ratio}} = {{symbol}}{{total}} / 1M tokens (5m缓存创建倍率: {{cacheCreationRatio5m}})": "5m cache creation price: {{symbol}}{{price}} * {{ratio}} = {{symbol}}{{total}} / 1M tokens (5m cache creation ratio: {{cacheCreationRatio5m}})",
     "8 - 高": "8 - High",
-    "AGPL v3.0协议": "AGPL v3.0 License",
     "AI 对话": "AI Chat",
     "AI模型测试环境": "AI model testing environment",
     "AI模型配置": "AI model configuration",
@@ -166,7 +165,6 @@
     "LinuxDO ID": "LinuxDO ID",
     "Logo 图片地址": "Logo image address",
     "Midjourney 任务记录": "Midjourney Task Records",
-    "MIT许可证": "MIT License",
     "New API项目仓库地址：": "New API project repository address: ",
     "NewAPI 默认不会将入口请求的 User-Agent 透传到上游渠道；该条件仅用于识别访问本站点的客户端。": "NewAPI does not pass the incoming request's User-Agent to upstream channels by default; this condition is only used to identify clients accessing this site.",
     "OAuth Client ID": "OAuth Client ID",
@@ -1416,7 +1414,6 @@
     "按量计费": "Pay as you go",
     "按顺序替换content中的变量占位符": "Replace variable placeholders in content in order",
     "换脸": "Face swap",
-    "授权，需在遵守": " and must be used in compliance with the ",
     "授权失败": "Authorization failed",
     "授权端点": "Authorization Endpoint",
     "授权范围 (Scopes)": "Scopes",
@@ -1749,7 +1746,6 @@
     "本月获得": "This month",
     "本设备：手机指纹/面容，外接：USB安全密钥": "Built-in: phone fingerprint/face, External: USB security key",
     "本设备内置": "Built-in device",
-    "本项目根据": "This project is licensed under the ",
     "机密环境变量": "Secret Environment Variables",
     "机密环境变量将被加密存储，适用于存储密码、API密钥等敏感信息。": "Secret environment variables will be stored encrypted, suitable for storing passwords, API keys and other sensitive information.",
     "机密环境变量说明": "Secret Environment Variables Description",
@@ -2127,7 +2123,6 @@
     "登录成功！": "Login successful!",
     "登录过期，请重新登录！": "Login expired, please log in again!",
     "白名单": "Whitelist",
-    "的前提下使用。": "for use under the following conditions:",
     "监控设置": "Monitoring Settings",
     "目录总大小": "Directory Total Size",
     "目录文件数": "Directory File Count",
@@ -3350,3 +3345,4 @@
     "支持精确匹配；使用 regex: 开头可按正则匹配。": "Supports exact matching. Use a regex: prefix for regex matching."
   }
 }
+

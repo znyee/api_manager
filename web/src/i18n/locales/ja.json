@@ -45,7 +45,6 @@
     "5m缓存创建 {{tokens}} tokens / 1M tokens * {{symbol}}{{price}} (倍率: {{ratio}})": "5m cache creation {{tokens}} tokens / 1M tokens * {{symbol}}{{price}} (ratio: {{ratio}})",
     "5m缓存创建价格：{{symbol}}{{price}} * {{ratio}} = {{symbol}}{{total}} / 1M tokens (5m缓存创建倍率: {{cacheCreationRatio5m}})": "5m cache creation price: {{symbol}}{{price}} * {{ratio}} = {{symbol}}{{total}} / 1M tokens (5m cache creation ratio: {{cacheCreationRatio5m}})",
     "8 - 高": "8 - 高",
-    "AGPL v3.0协议": "AGPL v3.0ライセンス",
     "AI 对话": "AIチャット",
     "AI模型测试环境": "AIモデルテスト環境",
     "AI模型配置": "AIモデル設定",
@@ -162,7 +161,6 @@
     "LinuxDO ID": "LinuxDO ID",
     "Logo 图片地址": "ロゴ画像URL",
     "Midjourney 任务记录": "Midjourneyタスク履歴",
-    "MIT许可证": "MITライセンス",
     "New API项目仓库地址：": "New APIプロジェクトリポジトリ：",
     "NewAPI 默认不会将入口请求的 User-Agent 透传到上游渠道；该条件仅用于识别访问本站点的客户端。": "NewAPIはデフォルトでは入力リクエストのUser-Agentを上流チャネルにパススルーしません。この条件はこのサイトにアクセスするクライアントの識別にのみ使用されます。",
     "OAuth Client ID": "OAuth Client ID",
@@ -1395,7 +1393,6 @@
     "按量计费": "従量課金",
     "按顺序替换content中的变量占位符": "content内の変数プレースホルダーを順番に置換します",
     "换脸": "フェイススワップ",
-    "授权，需在遵守": "の条件に基づき、",
     "授权失败": "認可に失敗しました",
     "排序": "並び順",
     "排队中": "待機中",
@@ -1719,7 +1716,6 @@
     "本月获得": "今月の獲得",
     "本设备：手机指纹/面容，外接：USB安全密钥": "内蔵：スマートフォンの指紋/顔認証、外部：USBセキュリティキー",
     "本设备内置": "このデバイス",
-    "本项目根据": "本プロジェクトは",
     "机密环境变量": "Secret Environment Variables",
     "机密环境变量将被加密存储，适用于存储密码、API密钥等敏感信息。": "Secret environment variables will be stored encrypted, suitable for storing passwords, API keys and other sensitive information.",
     "机密环境变量说明": "Secret Environment Variables Description",
@@ -2087,7 +2083,6 @@
     "登录成功！": "ログインに成功しました",
     "登录过期，请重新登录！": "セッションの有効期限が切れています。再度ログインしてください",
     "白名单": "ホワイトリスト",
-    "的前提下使用。": "の元で利用可能です。",
     "监控设置": "監視設定",
     "目录总大小": "ディレクトリ合計サイズ",
     "目录文件数": "ディレクトリファイル数",
@@ -3292,3 +3287,4 @@
     "输出价格：{{symbol}}{{total}} / 1M tokens": "補完料金：{{symbol}}{{total}} / 1M tokens"
   }
 }
+
