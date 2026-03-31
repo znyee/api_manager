@@ -8,9 +8,9 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/setting"
 	"io"
 	"log"
 	"net/http"
@@ -462,3 +462,4 @@ func genCreemLink(referenceId string, product *CreemProduct, email string, usern
 	log.Printf("Creem 支付链接创建成功 - 订单号: %s, 支付链接: %s", referenceId, checkoutResp.CheckoutUrl)
 	return checkoutResp.CheckoutUrl, nil
 }
+

@@ -13,8 +13,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/model"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
@@ -632,3 +632,4 @@ func SyncUpstreamPreview(c *gin.Context) {
 		},
 	})
 }
+

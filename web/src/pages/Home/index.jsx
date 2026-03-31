@@ -212,7 +212,7 @@ const Home = () => {
                       icon={<IconGithubLogo />}
                       onClick={() =>
                         window.open(
-                          'https://github.com/QuantumNous/new-api',
+                          'https://github.com/znyee/api_manager',
                           '_blank',
                         )
                       }
@@ -335,4 +335,5 @@ const Home = () => {
 };
 
 export default Home;
+
 

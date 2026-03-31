@@ -1,8 +1,8 @@
 package middleware
 
 import (
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/service"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/service"
 	"github.com/gin-gonic/gin"
 )
 
@@ -20,3 +20,4 @@ func BodyStorageCleanup() gin.HandlerFunc {
 		service.CleanupFileSources(c)
 	}
 }
+

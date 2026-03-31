@@ -3,7 +3,7 @@ package service
 import (
 	"time"
 
-	"github.com/QuantumNous/new-api/model"
+	"github.com/znyee/api_manager/model"
 )
 
 // ---------------------------------------------------------------------------
@@ -137,3 +137,4 @@ func refundWithRetry(fn func() error) error {
 	}
 	return lastErr
 }
+

@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
+	"github.com/znyee/api_manager/model"
 )
 
 type CodexCredentialRefreshOptions struct {
@@ -102,3 +102,4 @@ func RefreshCodexChannelCredential(ctx context.Context, channelID int, opts Code
 
 	return oauthKey, ch, nil
 }
+

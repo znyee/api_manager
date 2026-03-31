@@ -3,11 +3,11 @@ package service
 import (
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
+	"github.com/znyee/api_manager/dto"
+	relaycommon "github.com/znyee/api_manager/relay/common"
+	"github.com/znyee/api_manager/types"
 
 	"github.com/gin-gonic/gin"
 )
@@ -234,3 +234,4 @@ func GenerateMjOtherInfo(relayInfo *relaycommon.RelayInfo, priceData types.Price
 	appendRequestPath(nil, relayInfo, other)
 	return other
 }
+

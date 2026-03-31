@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/types"
 )
 
 const (
@@ -429,3 +429,4 @@ func GetOpenAIError(errorField any) *types.OpenAIError {
 		}
 	}
 }
+

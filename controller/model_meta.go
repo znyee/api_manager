@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
+	"github.com/znyee/api_manager/model"
 
 	"github.com/gin-gonic/gin"
 )
@@ -328,3 +328,4 @@ func enrichModels(models []*model.Model) {
 		mm.MatchedCount = len(names)
 	}
 }
+

@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/znyee/api_manager/constant"
 )
 
 var (
@@ -22,10 +22,9 @@ var (
 )
 
 func printHelp() {
-	fmt.Println("NewAPI(Based OneAPI) " + Version + " - The next-generation LLM gateway and AI asset management system supports multiple languages.")
-	fmt.Println("Original Project: OneAPI by JustSong - https://github.com/songquanpeng/one-api")
-	fmt.Println("Maintainer: QuantumNous - https://github.com/QuantumNous/new-api")
-	fmt.Println("Usage: newapi [--port <port>] [--log-dir <log directory>] [--version] [--help]")
+	fmt.Println("API Manager " + Version + " - Multi-provider AI gateway and management platform.")
+	fmt.Println("Repository: https://github.com/znyee/api_manager")
+	fmt.Println("Usage: api_manager [--port <port>] [--log-dir <log directory>] [--version] [--help]")
 }
 
 func InitEnv() {
@@ -178,3 +177,4 @@ func initConstantEnv() {
 	}
 	constant.TrustedRedirectDomains = trustedDomains
 }
+

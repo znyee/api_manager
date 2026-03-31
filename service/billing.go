@@ -3,9 +3,9 @@ package service
 import (
 	"fmt"
 
-	"github.com/QuantumNous/new-api/logger"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/logger"
+	relaycommon "github.com/znyee/api_manager/relay/common"
+	"github.com/znyee/api_manager/types"
 	"github.com/gin-gonic/gin"
 )
 
@@ -76,3 +76,4 @@ func SettleBilling(ctx *gin.Context, relayInfo *relaycommon.RelayInfo, actualQuo
 	}
 	return nil
 }
+

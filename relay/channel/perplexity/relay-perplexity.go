@@ -1,6 +1,6 @@
 package perplexity
 
-import "github.com/QuantumNous/new-api/dto"
+import "github.com/znyee/api_manager/dto"
 
 func requestOpenAI2Perplexity(request dto.GeneralOpenAIRequest) *dto.GeneralOpenAIRequest {
 	messages := make([]dto.Message, 0, len(request.Messages))
@@ -30,3 +30,4 @@ func requestOpenAI2Perplexity(request dto.GeneralOpenAIRequest) *dto.GeneralOpen
 	}
 	return req
 }
+

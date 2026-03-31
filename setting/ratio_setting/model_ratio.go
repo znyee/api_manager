@@ -3,9 +3,9 @@ package ratio_setting
 import (
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/setting/operation_setting"
+	"github.com/znyee/api_manager/types"
 )
 
 // from songquanpeng/one-api
@@ -732,3 +732,4 @@ func GetModelRatioOrPrice(model string) (float64, bool, bool) { // price or rati
 	}
 	return 37.5, false, false
 }
+

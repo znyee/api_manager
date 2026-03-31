@@ -10,8 +10,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
 
 	"golang.org/x/image/webp"
 )
@@ -176,3 +176,4 @@ func getImageConfig(reader io.Reader) (image.Config, string, error) {
 	}
 	return config, format, nil
 }
+

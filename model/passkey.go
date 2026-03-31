@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/znyee/api_manager/common"
 
 	"github.com/go-webauthn/webauthn/protocol"
 	"github.com/go-webauthn/webauthn/webauthn"
@@ -208,3 +208,4 @@ func DeletePasskeyByUserID(userID int) error {
 	}
 	return nil
 }
+

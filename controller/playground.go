@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/QuantumNous/new-api/middleware"
-	"github.com/QuantumNous/new-api/model"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/middleware"
+	"github.com/znyee/api_manager/model"
+	relaycommon "github.com/znyee/api_manager/relay/common"
+	"github.com/znyee/api_manager/types"
 
 	"github.com/gin-gonic/gin"
 )
@@ -54,3 +54,4 @@ func Playground(c *gin.Context) {
 
 	Relay(c, types.RelayFormatOpenAI)
 }
+

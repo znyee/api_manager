@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/znyee/api_manager/common"
 	"github.com/go-redis/redis/v8"
 )
 
@@ -88,3 +88,4 @@ func WithRate(r int64) Option {
 func WithRequested(n int64) Option {
 	return func(cfg *Config) { cfg.Requested = n }
 }
+

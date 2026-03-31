@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
 
 	"github.com/glebarez/sqlite"
 	"gorm.io/driver/mysql"
@@ -702,3 +702,4 @@ func PingDB() error {
 	common.SysLog("Database pinged successfully")
 	return nil
 }
+

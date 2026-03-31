@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/dto"
 	"github.com/samber/lo"
 )
 
@@ -400,3 +400,4 @@ func ChatCompletionsRequestToResponsesRequest(req *dto.GeneralOpenAIRequest) (*d
 
 	return out, nil
 }
+

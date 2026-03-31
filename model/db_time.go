@@ -1,6 +1,6 @@
 package model
 
-import "github.com/QuantumNous/new-api/common"
+import "github.com/znyee/api_manager/common"
 
 // GetDBTimestamp returns a UNIX timestamp from database time.
 // Falls back to application time on error.
@@ -20,3 +20,4 @@ func GetDBTimestamp() int64 {
 	}
 	return ts
 }
+

@@ -6,10 +6,10 @@ import (
 	"log"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/setting"
+	"github.com/znyee/api_manager/setting/operation_setting"
 	"github.com/gin-gonic/gin"
 	"github.com/thanhpk/randstr"
 )
@@ -127,3 +127,4 @@ func SubscriptionRequestCreemPay(c *gin.Context) {
 		},
 	})
 }
+

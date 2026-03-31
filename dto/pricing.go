@@ -1,6 +1,6 @@
 package dto
 
-import "github.com/QuantumNous/new-api/constant"
+import "github.com/znyee/api_manager/constant"
 
 // 这里不好动就不动了，本来想独立出来的（
 type OpenAIModels struct {
@@ -33,3 +33,4 @@ type GeminiModel struct {
 	TopP                       interface{}   `json:"topP"`
 	TopK                       interface{}   `json:"topK"`
 }
+

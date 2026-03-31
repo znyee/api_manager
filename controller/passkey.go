@@ -7,10 +7,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
-	passkeysvc "github.com/QuantumNous/new-api/service/passkey"
-	"github.com/QuantumNous/new-api/setting/system_setting"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/model"
+	passkeysvc "github.com/znyee/api_manager/service/passkey"
+	"github.com/znyee/api_manager/setting/system_setting"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
@@ -504,3 +504,4 @@ func getSessionUser(c *gin.Context) (*model.User, error) {
 	}
 	return user, nil
 }
+

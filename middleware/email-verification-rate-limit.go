@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/znyee/api_manager/common"
 
 	"github.com/gin-gonic/gin"
 )
@@ -79,3 +79,4 @@ func EmailVerificationRateLimit() gin.HandlerFunc {
 		}
 	}
 }
+

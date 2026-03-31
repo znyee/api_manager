@@ -9,19 +9,19 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/service"
+	"github.com/znyee/api_manager/setting/operation_setting"
+	"github.com/znyee/api_manager/types"
 
 	"github.com/shopspring/decimal"
 
 	"github.com/gin-gonic/gin"
 )
 
-// https://github.com/songquanpeng/one-api/issues/79
+// Upstream-compatible billing handling note
 
 type OpenAISubscriptionResponse struct {
 	Object             string  `json:"object"`
@@ -503,3 +503,4 @@ func AutomaticallyUpdateChannels(frequency int) {
 		common.SysLog("channels update done")
 	}
 }
+

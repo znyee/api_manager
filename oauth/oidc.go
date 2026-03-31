@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/i18n"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting/system_setting"
+	"github.com/znyee/api_manager/i18n"
+	"github.com/znyee/api_manager/logger"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/setting/system_setting"
 	"github.com/gin-gonic/gin"
 )
 
@@ -175,3 +175,4 @@ func (p *OIDCProvider) SetProviderUserID(user *model.User, providerUserID string
 func (p *OIDCProvider) GetProviderPrefix() string {
 	return "oidc_"
 }
+

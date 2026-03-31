@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/types"
 	"github.com/samber/lo"
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"
@@ -2055,3 +2055,4 @@ func BuildParamOverrideContext(info *RelayInfo) map[string]interface{} {
 	ctx["is_channel_test"] = info.IsChannelTest
 	return ctx
 }
+

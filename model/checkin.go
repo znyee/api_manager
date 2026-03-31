@@ -5,8 +5,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/setting/operation_setting"
 	"gorm.io/gorm"
 )
 
@@ -177,3 +177,4 @@ func GetUserCheckinStats(userId int, month string) (map[string]interface{}, erro
 		"records":          checkinRecords,  // 本月签到记录详情（不含id和user_id）
 	}, nil
 }
+

@@ -3,8 +3,8 @@ package controller
 import (
 	"strconv"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/model"
 
 	"github.com/gin-gonic/gin"
 )
@@ -88,3 +88,4 @@ func DeletePrefillGroup(c *gin.Context) {
 	}
 	common.ApiSuccess(c, nil)
 }
+

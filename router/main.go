@@ -7,8 +7,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/middleware"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/middleware"
 
 	"github.com/gin-gonic/gin"
 )
@@ -33,3 +33,4 @@ func SetRouter(router *gin.Engine, buildFS embed.FS, indexPage []byte) {
 		})
 	}
 }
+

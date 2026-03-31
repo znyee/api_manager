@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/znyee/api_manager/common"
 )
 
 const (
@@ -315,3 +315,4 @@ func decodeJWTClaims(token string) (map[string]any, bool) {
 	}
 	return claims, true
 }
+

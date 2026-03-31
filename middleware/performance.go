@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/types"
 	"github.com/gin-gonic/gin"
 )
 
@@ -63,3 +63,4 @@ func checkSystemPerformance() *types.NewAPIError {
 
 	return nil
 }
+

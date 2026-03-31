@@ -4,7 +4,7 @@ import (
 	"database/sql/driver"
 	"encoding/json"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/znyee/api_manager/common"
 
 	"gorm.io/gorm"
 )
@@ -125,3 +125,4 @@ func GetAllPrefillGroups(groupType string) ([]*PrefillGroup, error) {
 	}
 	return groups, nil
 }
+

@@ -3,7 +3,7 @@ package model
 import (
 	"strconv"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/znyee/api_manager/common"
 
 	"gorm.io/gorm"
 )
@@ -158,3 +158,4 @@ func SearchModels(keyword string, vendor string, offset int, limit int) ([]*Mode
 	}
 	return models, total, nil
 }
+

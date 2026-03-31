@@ -15,19 +15,19 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/middleware"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/relay"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	relayconstant "github.com/QuantumNous/new-api/relay/constant"
-	"github.com/QuantumNous/new-api/relay/helper"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/setting/ratio_setting"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
+	"github.com/znyee/api_manager/dto"
+	"github.com/znyee/api_manager/middleware"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/relay"
+	relaycommon "github.com/znyee/api_manager/relay/common"
+	relayconstant "github.com/znyee/api_manager/relay/constant"
+	"github.com/znyee/api_manager/relay/helper"
+	"github.com/znyee/api_manager/service"
+	"github.com/znyee/api_manager/setting/operation_setting"
+	"github.com/znyee/api_manager/setting/ratio_setting"
+	"github.com/znyee/api_manager/types"
 
 	"github.com/bytedance/gopkg/util/gopool"
 	"github.com/samber/lo"
@@ -896,3 +896,4 @@ func AutomaticallyTestChannels() {
 		}
 	})
 }
+

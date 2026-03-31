@@ -3,12 +3,12 @@ package helper
 import (
 	"fmt"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/logger"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/setting/ratio_setting"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/logger"
+	relaycommon "github.com/znyee/api_manager/relay/common"
+	"github.com/znyee/api_manager/setting/operation_setting"
+	"github.com/znyee/api_manager/setting/ratio_setting"
+	"github.com/znyee/api_manager/types"
 
 	"github.com/gin-gonic/gin"
 )
@@ -197,3 +197,4 @@ func ContainPriceOrRatio(modelName string) bool {
 	}
 	return false
 }
+

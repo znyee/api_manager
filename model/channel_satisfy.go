@@ -1,8 +1,8 @@
 package model
 
 import (
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/setting/ratio_setting"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/setting/ratio_setting"
 )
 
 func IsChannelEnabledForGroupModel(group string, modelName string, channelID int) bool {
@@ -69,3 +69,4 @@ func isChannelIDInList(list []int, channelID int) bool {
 	}
 	return false
 }
+

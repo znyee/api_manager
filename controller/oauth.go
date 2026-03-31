@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/i18n"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/oauth"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/i18n"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/oauth"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
@@ -360,3 +360,4 @@ func handleOAuthError(c *gin.Context, err error) {
 		common.ApiError(c, err)
 	}
 }
+

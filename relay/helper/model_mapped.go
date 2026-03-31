@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/relay/common"
-	relayconstant "github.com/QuantumNous/new-api/relay/constant"
-	"github.com/QuantumNous/new-api/setting/ratio_setting"
+	"github.com/znyee/api_manager/dto"
+	"github.com/znyee/api_manager/relay/common"
+	relayconstant "github.com/znyee/api_manager/relay/constant"
+	"github.com/znyee/api_manager/setting/ratio_setting"
 	"github.com/gin-gonic/gin"
 )
 
@@ -79,3 +79,4 @@ func ModelMappedHelper(c *gin.Context, info *common.RelayInfo, request dto.Reque
 	}
 	return nil
 }
+

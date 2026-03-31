@@ -10,15 +10,15 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/i18n"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/setting"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/dto"
+	"github.com/znyee/api_manager/i18n"
+	"github.com/znyee/api_manager/logger"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/service"
+	"github.com/znyee/api_manager/setting"
 
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/znyee/api_manager/constant"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
@@ -1185,3 +1185,4 @@ func UpdateUserSetting(c *gin.Context) {
 
 	common.ApiSuccessI18n(c, i18n.MsgSettingSaved, nil)
 }
+

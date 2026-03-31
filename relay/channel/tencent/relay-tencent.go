@@ -14,13 +14,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/relay/helper"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
+	"github.com/znyee/api_manager/dto"
+	relaycommon "github.com/znyee/api_manager/relay/common"
+	"github.com/znyee/api_manager/relay/helper"
+	"github.com/znyee/api_manager/service"
+	"github.com/znyee/api_manager/types"
 
 	"github.com/gin-gonic/gin"
 )
@@ -232,3 +232,4 @@ func getTencentSign(req TencentChatRequest, adaptor *Adaptor, secId, secKey stri
 		signature)
 	return authorization
 }
+

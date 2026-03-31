@@ -9,15 +9,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/i18n"
-	"github.com/QuantumNous/new-api/model"
-	relayconstant "github.com/QuantumNous/new-api/relay/constant"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/setting/ratio_setting"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
+	"github.com/znyee/api_manager/dto"
+	"github.com/znyee/api_manager/i18n"
+	"github.com/znyee/api_manager/model"
+	relayconstant "github.com/znyee/api_manager/relay/constant"
+	"github.com/znyee/api_manager/service"
+	"github.com/znyee/api_manager/setting/ratio_setting"
+	"github.com/znyee/api_manager/types"
 
 	"github.com/gin-gonic/gin"
 )
@@ -433,3 +433,4 @@ func extractModelNameFromGeminiPath(path string) string {
 	// 返回模型名部分
 	return path[startIndex : startIndex+colonIndex]
 }
+

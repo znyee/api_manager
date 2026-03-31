@@ -10,13 +10,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/relay/channel/gemini"
-	"github.com/QuantumNous/new-api/relay/channel/ollama"
-	"github.com/QuantumNous/new-api/service"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
+	"github.com/znyee/api_manager/dto"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/relay/channel/gemini"
+	"github.com/znyee/api_manager/relay/channel/ollama"
+	"github.com/znyee/api_manager/service"
 
 	"github.com/gin-gonic/gin"
 	"github.com/samber/lo"
@@ -977,3 +977,4 @@ func DetectAllChannelUpstreamModelUpdates(c *gin.Context) {
 		},
 	})
 }
+

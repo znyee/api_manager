@@ -3,7 +3,7 @@ package reasonmap
 import (
 	"strings"
 
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/znyee/api_manager/constant"
 )
 
 func ClaudeStopReasonToOpenAIFinishReason(stopReason string) string {
@@ -39,3 +39,4 @@ func OpenAIFinishReasonToClaudeStopReason(finishReason string) string {
 		return finishReason
 	}
 }
+

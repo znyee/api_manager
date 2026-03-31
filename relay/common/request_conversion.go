@@ -1,8 +1,8 @@
 package common
 
 import (
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/dto"
+	"github.com/znyee/api_manager/types"
 )
 
 func GuessRelayFormatFromRequest(req any) (types.RelayFormat, bool) {
@@ -38,3 +38,4 @@ func AppendRequestConversionFromRequest(info *RelayInfo, req any) {
 	}
 	info.AppendRequestConversion(format)
 }
+

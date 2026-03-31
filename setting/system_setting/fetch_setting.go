@@ -1,6 +1,6 @@
 package system_setting
 
-import "github.com/QuantumNous/new-api/setting/config"
+import "github.com/znyee/api_manager/setting/config"
 
 type FetchSetting struct {
 	EnableSSRFProtection   bool     `json:"enable_ssrf_protection"` // 是否启用SSRF防护
@@ -32,3 +32,4 @@ func init() {
 func GetFetchSetting() *FetchSetting {
 	return &defaultFetchSetting
 }
+

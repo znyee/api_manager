@@ -6,12 +6,12 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/relay/channel"
-	"github.com/QuantumNous/new-api/relay/channel/claude"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/dto"
+	"github.com/znyee/api_manager/relay/channel"
+	"github.com/znyee/api_manager/relay/channel/claude"
+	relaycommon "github.com/znyee/api_manager/relay/common"
+	"github.com/znyee/api_manager/service"
+	"github.com/znyee/api_manager/types"
 	"github.com/aws/aws-sdk-go-v2/service/bedrockruntime"
 	"github.com/pkg/errors"
 
@@ -182,3 +182,4 @@ func (a *Adaptor) GetModelList() (models []string) {
 func (a *Adaptor) GetChannelName() string {
 	return ChannelName
 }
+

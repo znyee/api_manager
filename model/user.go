@@ -8,9 +8,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/logger"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/dto"
+	"github.com/znyee/api_manager/logger"
 
 	"github.com/bytedance/gopkg/util/gopool"
 	"gorm.io/gorm"
@@ -1035,3 +1035,4 @@ func RootUserExists() bool {
 	}
 	return true
 }
+

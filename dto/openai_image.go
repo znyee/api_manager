@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/types"
 
 	"github.com/gin-gonic/gin"
 )
@@ -180,3 +180,4 @@ type ImageData struct {
 	B64Json       string `json:"b64_json"`
 	RevisedPrompt string `json:"revised_prompt"`
 }
+

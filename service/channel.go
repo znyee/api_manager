@@ -5,12 +5,12 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
+	"github.com/znyee/api_manager/dto"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/setting/operation_setting"
+	"github.com/znyee/api_manager/types"
 )
 
 func formatNotifyType(channelId int, status int) string {
@@ -113,3 +113,4 @@ func ShouldEnableChannel(newAPIError *types.NewAPIError, status int) bool {
 	}
 	return true
 }
+

@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/types"
 )
 
 type StatusCodeRange struct {
@@ -206,3 +206,4 @@ func parseHTTPStatusCodeToken(token string) (StatusCodeRange, error) {
 	}
 	return StatusCodeRange{Start: code, End: code}, nil
 }
+

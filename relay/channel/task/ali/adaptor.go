@@ -8,14 +8,14 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/relay/channel"
-	"github.com/QuantumNous/new-api/relay/channel/task/taskcommon"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/service"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/dto"
+	"github.com/znyee/api_manager/logger"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/relay/channel"
+	"github.com/znyee/api_manager/relay/channel/task/taskcommon"
+	relaycommon "github.com/znyee/api_manager/relay/common"
+	"github.com/znyee/api_manager/service"
 	"github.com/samber/lo"
 
 	"github.com/gin-gonic/gin"
@@ -533,3 +533,4 @@ func convertAliStatus(aliStatus string) string {
 		return dto.VideoStatusUnknown
 	}
 }
+

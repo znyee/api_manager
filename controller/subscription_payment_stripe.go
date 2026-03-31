@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting"
-	"github.com/QuantumNous/new-api/setting/system_setting"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/setting"
+	"github.com/znyee/api_manager/setting/system_setting"
 	"github.com/gin-gonic/gin"
 	"github.com/stripe/stripe-go/v81"
 	"github.com/stripe/stripe-go/v81/checkout/session"
@@ -136,3 +136,4 @@ func genStripeSubscriptionLink(referenceId string, customerId string, email stri
 	}
 	return result.URL, nil
 }
+

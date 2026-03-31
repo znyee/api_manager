@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
 )
 
 func cacheSetToken(token Token) error {
@@ -63,3 +63,4 @@ func cacheGetTokenByKey(key string) (*Token, error) {
 	token.Key = key
 	return &token, nil
 }
+

@@ -8,10 +8,10 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting/system_setting"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/dto"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/setting/system_setting"
 )
 
 func NotifyRootUser(t string, subject string, content string) {
@@ -279,3 +279,4 @@ func sendGotifyNotify(gotifyUrl string, gotifyToken string, priority int, data d
 
 	return nil
 }
+

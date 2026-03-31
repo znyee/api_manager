@@ -6,15 +6,15 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/middleware"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/oauth"
-	"github.com/QuantumNous/new-api/setting"
-	"github.com/QuantumNous/new-api/setting/console_setting"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/setting/system_setting"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
+	"github.com/znyee/api_manager/middleware"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/oauth"
+	"github.com/znyee/api_manager/setting"
+	"github.com/znyee/api_manager/setting/console_setting"
+	"github.com/znyee/api_manager/setting/operation_setting"
+	"github.com/znyee/api_manager/setting/system_setting"
 
 	"github.com/gin-gonic/gin"
 )
@@ -371,3 +371,4 @@ func ResetPassword(c *gin.Context) {
 	})
 	return
 }
+

@@ -5,7 +5,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/znyee/api_manager/constant"
 	"github.com/andybalholm/brotli"
 	"github.com/gin-gonic/gin"
 )
@@ -74,3 +74,4 @@ func DecompressRequestMiddleware() gin.HandlerFunc {
 		c.Next()
 	}
 }
+

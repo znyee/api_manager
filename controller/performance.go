@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/logger"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/logger"
 	"github.com/gin-gonic/gin"
 )
 
@@ -383,3 +383,4 @@ func getDiskCacheInfo() DiskCacheInfo {
 
 	return info
 }
+

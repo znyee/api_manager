@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/types"
 	"github.com/gin-gonic/gin"
 )
 
@@ -65,3 +65,4 @@ type RerankResponse struct {
 	Results []RerankResponseResult `json:"results"`
 	Usage   Usage                  `json:"usage"`
 }
+

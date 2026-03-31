@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/QuantumNous/new-api/dto"
+	"github.com/znyee/api_manager/dto"
 )
 
 func TestFormatClaudeResponseInfo_MessageStart(t *testing.T) {
@@ -255,3 +255,4 @@ func TestBuildOpenAIStyleUsageFromClaudeUsagePreservesCacheCreationRemainder(t *
 		})
 	}
 }
+

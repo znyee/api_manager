@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/setting/config"
+	"github.com/znyee/api_manager/setting/config"
 )
 
 //var claudeHeadersSettings = map[string][]string{}
@@ -87,3 +87,4 @@ func (c *ClaudeSettings) GetDefaultMaxTokens(model string) int {
 	}
 	return c.DefaultMaxTokens["default"]
 }
+

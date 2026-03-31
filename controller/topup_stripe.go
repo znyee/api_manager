@@ -10,11 +10,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/setting/system_setting"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/setting"
+	"github.com/znyee/api_manager/setting/operation_setting"
+	"github.com/znyee/api_manager/setting/system_setting"
 
 	"github.com/gin-gonic/gin"
 	"github.com/stripe/stripe-go/v81"
@@ -352,3 +352,4 @@ func getStripeMinTopup() int64 {
 	}
 	return int64(minTopup)
 }
+

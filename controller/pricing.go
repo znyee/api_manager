@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/setting/ratio_setting"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/service"
+	"github.com/znyee/api_manager/setting/ratio_setting"
 
 	"github.com/gin-gonic/gin"
 )
@@ -73,3 +73,4 @@ func ResetModelRatio(c *gin.Context) {
 		"message": "重置模型倍率成功",
 	})
 }
+

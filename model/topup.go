@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/logger"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/logger"
 
 	"github.com/shopspring/decimal"
 	"gorm.io/gorm"
@@ -435,3 +435,4 @@ func RechargeWaffo(tradeNo string) (err error) {
 
 	return nil
 }
+

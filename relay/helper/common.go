@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/dto"
+	"github.com/znyee/api_manager/logger"
+	"github.com/znyee/api_manager/types"
 
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/websocket"
@@ -209,3 +209,4 @@ func GenerateFinalUsageResponse(id string, createAt int64, model string, usage d
 		Usage:             &usage,
 	}
 }
+

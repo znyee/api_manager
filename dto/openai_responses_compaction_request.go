@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/types"
 
 	"github.com/gin-gonic/gin"
 )
@@ -38,3 +38,4 @@ func (r *OpenAIResponsesCompactionRequest) SetModelName(modelName string) {
 		r.Model = modelName
 	}
 }
+

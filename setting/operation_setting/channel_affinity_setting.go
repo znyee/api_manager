@@ -1,6 +1,6 @@
 package operation_setting
 
-import "github.com/QuantumNous/new-api/setting/config"
+import "github.com/znyee/api_manager/setting/config"
 
 type ChannelAffinityKeySource struct {
 	Type string `json:"type"` // context_int, context_string, gjson
@@ -118,3 +118,4 @@ func init() {
 func GetChannelAffinitySetting() *ChannelAffinitySetting {
 	return &channelAffinitySetting
 }
+

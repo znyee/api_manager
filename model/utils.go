@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/znyee/api_manager/common"
 
 	"github.com/bytedance/gopkg/util/gopool"
 	"gorm.io/gorm"
@@ -110,3 +110,4 @@ func RecordExist(err error) (bool, error) {
 func shouldUpdateRedis(fromDB bool, err error) bool {
 	return common.RedisEnabled && fromDB && err == nil
 }
+

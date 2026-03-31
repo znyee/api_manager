@@ -1,6 +1,6 @@
 package model_setting
 
-import "github.com/QuantumNous/new-api/setting/config"
+import "github.com/znyee/api_manager/setting/config"
 
 // GrokSettings defines Grok model configuration.
 type GrokSettings struct {
@@ -22,3 +22,4 @@ func init() {
 func GetGrokSettings() *GrokSettings {
 	return &grokSettings
 }
+

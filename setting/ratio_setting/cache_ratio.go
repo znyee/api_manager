@@ -1,7 +1,7 @@
 package ratio_setting
 
 import (
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/types"
 )
 
 var defaultCacheRatio = map[string]float64{
@@ -148,3 +148,4 @@ func GetCacheRatioCopy() map[string]float64 {
 func GetCreateCacheRatioCopy() map[string]float64 {
 	return createCacheRatioMap.ReadAll()
 }
+

@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/logger"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/logger"
 
 	"gorm.io/gorm"
 )
@@ -69,3 +69,4 @@ func Redeem(key string, userId int) (quota int, err error) {
 	RecordLog(userId, LogTypeTopup, fmt.Sprintf("通过兑换码充值 %s，兑换码ID %d", logger.LogQuota(redemption.Quota), redemption.Id))
 	return redemption.Quota, nil
 }
+

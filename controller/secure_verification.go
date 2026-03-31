@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/model"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 )
@@ -173,3 +173,4 @@ func consumePasskeyReady(c *gin.Context) (bool, error) {
 	}
 	return true, nil
 }
+

@@ -11,14 +11,14 @@ import (
 	"sync"
 	"time"
 
-	common2 "github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/relay/constant"
-	"github.com/QuantumNous/new-api/relay/helper"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/types"
+	common2 "github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/logger"
+	"github.com/znyee/api_manager/relay/common"
+	"github.com/znyee/api_manager/relay/constant"
+	"github.com/znyee/api_manager/relay/helper"
+	"github.com/znyee/api_manager/service"
+	"github.com/znyee/api_manager/setting/operation_setting"
+	"github.com/znyee/api_manager/types"
 
 	"github.com/bytedance/gopkg/util/gopool"
 	"github.com/gin-gonic/gin"
@@ -552,3 +552,4 @@ func DoTaskApiRequest(a TaskAdaptor, c *gin.Context, info *common.RelayInfo, req
 	}
 	return resp, nil
 }
+

@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"io"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
 
 	"github.com/gin-gonic/gin"
 )
@@ -50,3 +50,4 @@ func KlingRequestConvert() func(c *gin.Context) {
 		c.Next()
 	}
 }
+

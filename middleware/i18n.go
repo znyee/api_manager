@@ -3,10 +3,10 @@ package middleware
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/i18n"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
+	"github.com/znyee/api_manager/dto"
+	"github.com/znyee/api_manager/i18n"
 )
 
 // I18n middleware detects and sets the language preference for the request
@@ -48,3 +48,4 @@ func GetLanguage(c *gin.Context) string {
 	}
 	return i18n.DefaultLang
 }
+

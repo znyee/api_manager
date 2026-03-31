@@ -3,7 +3,7 @@ package middleware
 import (
 	"context"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/znyee/api_manager/common"
 	"github.com/gin-gonic/gin"
 )
 
@@ -17,3 +17,4 @@ func RequestId() func(c *gin.Context) {
 		c.Next()
 	}
 }
+

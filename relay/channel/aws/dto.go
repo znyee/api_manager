@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/logger"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/dto"
+	"github.com/znyee/api_manager/logger"
 )
 
 type AwsClaudeRequest struct {
@@ -143,3 +143,4 @@ func parseStopSequences(stop any) []string {
 	}
 	return nil
 }
+

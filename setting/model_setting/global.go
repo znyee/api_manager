@@ -4,7 +4,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/QuantumNous/new-api/setting/config"
+	"github.com/znyee/api_manager/setting/config"
 )
 
 type ChatCompletionsToResponsesPolicy struct {
@@ -77,3 +77,4 @@ func ShouldPreserveThinkingSuffix(modelName string) bool {
 	}
 	return false
 }
+

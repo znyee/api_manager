@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/setting/config"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/setting/config"
+	"github.com/znyee/api_manager/types"
 )
 
 var defaultGroupRatio = map[string]float64{
@@ -123,3 +123,4 @@ func CheckGroupRatio(jsonStr string) error {
 	}
 	return nil
 }
+

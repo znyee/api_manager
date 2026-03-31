@@ -5,20 +5,20 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/relay"
-	"github.com/QuantumNous/new-api/relay/channel/ai360"
-	"github.com/QuantumNous/new-api/relay/channel/lingyiwanwu"
-	"github.com/QuantumNous/new-api/relay/channel/minimax"
-	"github.com/QuantumNous/new-api/relay/channel/moonshot"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/setting/ratio_setting"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
+	"github.com/znyee/api_manager/dto"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/relay"
+	"github.com/znyee/api_manager/relay/channel/ai360"
+	"github.com/znyee/api_manager/relay/channel/lingyiwanwu"
+	"github.com/znyee/api_manager/relay/channel/minimax"
+	"github.com/znyee/api_manager/relay/channel/moonshot"
+	relaycommon "github.com/znyee/api_manager/relay/common"
+	"github.com/znyee/api_manager/service"
+	"github.com/znyee/api_manager/setting/operation_setting"
+	"github.com/znyee/api_manager/setting/ratio_setting"
+	"github.com/znyee/api_manager/types"
 	"github.com/gin-gonic/gin"
 	"github.com/samber/lo"
 )
@@ -287,3 +287,4 @@ func RetrieveModel(c *gin.Context, modelType int) {
 		})
 	}
 }
+

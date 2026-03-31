@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/types"
 
 	"github.com/gin-gonic/gin"
 )
@@ -595,3 +595,4 @@ func (u *ClaudeUsage) GetCacheCreationTotalTokens() int {
 type ClaudeServerToolUse struct {
 	WebSearchRequests int `json:"web_search_requests"`
 }
+

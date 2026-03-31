@@ -1,4 +1,4 @@
-# AGENTS.md — Project Conventions for new-api
+# AGENTS.md — Project Conventions for api_manager
 
 ## Overview
 
@@ -130,3 +130,4 @@ For request structs that are parsed from client JSON and then re-marshaled to up
   - field absent in client JSON => `nil` => omitted on marshal;
   - field explicitly set to zero/false => non-`nil` pointer => must still be sent upstream.
 - Avoid using non-pointer scalars with `omitempty` for optional request parameters, because zero values (`0`, `0.0`, `false`) will be silently dropped during marshal.
+

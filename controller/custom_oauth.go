@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/oauth"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/oauth"
 	"github.com/gin-gonic/gin"
 )
 
@@ -582,3 +582,4 @@ func UnbindCustomOAuthByAdmin(c *gin.Context) {
 		"message": "success",
 	})
 }
+

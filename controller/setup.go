@@ -3,10 +3,10 @@ package controller
 import (
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/constant"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/setting/operation_setting"
 	"github.com/gin-gonic/gin"
 )
 
@@ -180,3 +180,4 @@ func boolToString(b bool) string {
 	}
 	return "false"
 }
+

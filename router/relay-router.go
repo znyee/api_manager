@@ -1,11 +1,11 @@
 package router
 
 import (
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/controller"
-	"github.com/QuantumNous/new-api/middleware"
-	"github.com/QuantumNous/new-api/relay"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/constant"
+	"github.com/znyee/api_manager/controller"
+	"github.com/znyee/api_manager/middleware"
+	"github.com/znyee/api_manager/relay"
+	"github.com/znyee/api_manager/types"
 
 	"github.com/gin-gonic/gin"
 )
@@ -222,3 +222,4 @@ func registerMjRouterGroup(relayMjRouter *gin.RouterGroup) {
 		relayMjRouter.POST("/submit/upload-discord-images", controller.RelayMidjourney)
 	}
 }
+

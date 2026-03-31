@@ -3,8 +3,8 @@ package dto
 import (
 	"encoding/json"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/types"
 )
 
 //type OpenAIError struct {
@@ -91,3 +91,4 @@ func (e GeneralErrorResponse) ToMessage() string {
 	}
 	return ""
 }
+

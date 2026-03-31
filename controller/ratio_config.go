@@ -3,7 +3,7 @@ package controller
 import (
 	"net/http"
 
-	"github.com/QuantumNous/new-api/setting/ratio_setting"
+	"github.com/znyee/api_manager/setting/ratio_setting"
 
 	"github.com/gin-gonic/gin"
 )
@@ -23,3 +23,4 @@ func GetRatioConfig(c *gin.Context) {
 		"data":    ratio_setting.GetExposedData(),
 	})
 }
+

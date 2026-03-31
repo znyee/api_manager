@@ -10,10 +10,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/service"
+	"github.com/znyee/api_manager/constant"
+	"github.com/znyee/api_manager/logger"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/service"
 
 	"github.com/gin-gonic/gin"
 )
@@ -194,3 +194,4 @@ func writeVideoDataURL(c *gin.Context, dataURL string) error {
 	_, err = c.Writer.Write(videoBytes)
 	return err
 }
+

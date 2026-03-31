@@ -1,8 +1,8 @@
 package router
 
 import (
-	"github.com/QuantumNous/new-api/controller"
-	"github.com/QuantumNous/new-api/middleware"
+	"github.com/znyee/api_manager/controller"
+	"github.com/znyee/api_manager/middleware"
 
 	"github.com/gin-gonic/gin"
 )
@@ -50,3 +50,4 @@ func SetVideoRouter(router *gin.Engine) {
 		jimengOfficialGroup.POST("/", controller.RelayTask)
 	}
 }
+

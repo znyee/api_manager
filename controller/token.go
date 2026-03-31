@@ -6,10 +6,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/i18n"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/i18n"
+	"github.com/znyee/api_manager/model"
+	"github.com/znyee/api_manager/setting/operation_setting"
 
 	"github.com/gin-gonic/gin"
 )
@@ -334,3 +334,4 @@ func DeleteTokenBatch(c *gin.Context) {
 		"data":    count,
 	})
 }
+

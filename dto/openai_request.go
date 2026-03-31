@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/types"
 	"github.com/samber/lo"
 
 	"github.com/gin-gonic/gin"
@@ -1041,3 +1041,4 @@ func (r *OpenAIResponsesRequest) ParseInput() []MediaInput {
 
 	return mediaInputs
 }
+

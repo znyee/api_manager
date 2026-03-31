@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/controller"
-	"github.com/QuantumNous/new-api/middleware"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/controller"
+	"github.com/znyee/api_manager/middleware"
 	"github.com/gin-contrib/gzip"
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
@@ -28,3 +28,4 @@ func SetWebRouter(router *gin.Engine, buildFS embed.FS, indexPage []byte) {
 		c.Data(http.StatusOK, "text/html; charset=utf-8", indexPage)
 	})
 }
+

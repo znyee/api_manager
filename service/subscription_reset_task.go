@@ -7,9 +7,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/logger"
+	"github.com/znyee/api_manager/model"
 
 	"github.com/bytedance/gopkg/util/gopool"
 )
@@ -91,3 +91,4 @@ func runSubscriptionQuotaResetOnce() {
 		logger.LogDebug(ctx, "subscription maintenance: reset_count=%d, expired_count=%d", totalReset, totalExpired)
 	}
 }
+

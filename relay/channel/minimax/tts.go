@@ -9,9 +9,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/dto"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/znyee/api_manager/dto"
+	relaycommon "github.com/znyee/api_manager/relay/common"
+	"github.com/znyee/api_manager/types"
 	"github.com/gin-gonic/gin"
 )
 
@@ -192,3 +192,4 @@ func handleChatCompletionResponse(c *gin.Context, resp *http.Response, info *rel
 	c.Data(resp.StatusCode, "application/json", body)
 	return nil, nil
 }
+

@@ -1,7 +1,7 @@
 package dify
 
 import (
-	"github.com/QuantumNous/new-api/dto"
+	"github.com/znyee/api_manager/dto"
 )
 
 type DifyChatRequest struct {
@@ -45,3 +45,4 @@ type DifyChunkChatCompletionResponse struct {
 	Data           DifyData     `json:"data"`
 	MetaData       DifyMetaData `json:"metadata"`
 }
+

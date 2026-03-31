@@ -4,8 +4,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/setting/config"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/setting/config"
 )
 
 type PasskeySettings struct {
@@ -48,3 +48,4 @@ func GetPasskeySettings() *PasskeySettings {
 	}
 	return &defaultPasskeySettings
 }
+

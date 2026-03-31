@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/pkg/ionet"
+	"github.com/znyee/api_manager/common"
+	"github.com/znyee/api_manager/pkg/ionet"
 	"github.com/gin-gonic/gin"
 )
 
@@ -808,3 +808,4 @@ func GetContainerDetails(c *gin.Context) {
 
 	common.ApiSuccess(c, data)
 }
+
