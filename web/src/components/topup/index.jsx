@@ -8,6 +8,7 @@ import {
   renderQuotaWithAmount,
   copy,
   getQuotaPerUnit,
+  getCurrencyConfig,
 } from '../../helpers';
 import { Modal, Toast } from '@douyinfe/semi-ui';
 import { useTranslation } from 'react-i18next';
@@ -110,7 +111,7 @@ const TopUp = () => {
       }
 
       if (topUpCount < minTopUp) {
-        showError(t('充值数量不能小于') + minTopUp);
+        showError(t('添加预算金额不能小于') + minTopUp);
         return;
       }
       setOpen(true);
@@ -135,7 +136,7 @@ const TopUp = () => {
     }
 
     if (topUpCount < minTopUp) {
-      showError('充值数量不能小于' + minTopUp);
+      showError(t('添加预算金额不能小于') + minTopUp);
       return;
     }
     setConfirmLoading(true);
@@ -249,7 +250,7 @@ const TopUp = () => {
   const waffoTopUp = async (payMethodIndex) => {
     try {
         if (topUpCount < waffoMinTopUp) {
-            showError(t('充值数量不能小于') + waffoMinTopUp);
+            showError(t('添加预算金额不能小于') + waffoMinTopUp);
             return;
         }
         setPaymentLoading(true);
@@ -683,7 +684,7 @@ const TopUp = () => {
 
       {/* Creem 充值确认模态框 */}
       <Modal
-        title={t('确定要充值 $')}
+        title={t('添加预算确认')}
         visible={creemOpen}
         onOk={onlineCreemTopUp}
         onCancel={handleCreemCancel}
@@ -698,13 +699,16 @@ const TopUp = () => {
               {t('产品名称')}：{selectedCreemProduct.name}
             </p>
             <p>
-              {t('价格')}：{selectedCreemProduct.currency === 'EUR' ? '€' : '$'}
+              {t('价格')}：
+              {selectedCreemProduct.currency === 'EUR'
+                ? '€'
+                : getCurrencyConfig().symbol || '¥'}
               {selectedCreemProduct.price}
             </p>
             <p>
-              {t('充值额度')}：{selectedCreemProduct.quota}
+              {t('添加预算')}：{selectedCreemProduct.quota}
             </p>
-            <p>{t('是否确认充值？')}</p>
+            <p>{t('是否确认添加预算？')}</p>
           </>
         )}
       </Modal>

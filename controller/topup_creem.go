@@ -106,10 +106,10 @@ func (*CreemAdaptor) RequestPay(c *gin.Context, req *CreemPayRequest) {
 	reference := fmt.Sprintf("creem-api-ref-%d-%d-%s", user.Id, time.Now().UnixMilli(), randstr.String(4))
 	referenceId := "ref_" + common.Sha1([]byte(reference))
 
-	// 先创建订单记录，使用产品配置的金额和充值额度
+	// 先创建订单记录，使用产品配置的金额和添加预算
 	topUp := &model.TopUp{
 		UserId:     id,
-		Amount:     selectedProduct.Quota, // 充值额度
+		Amount:     selectedProduct.Quota, // 添加预算
 		Money:      selectedProduct.Price, // 支付金额
 		TradeNo:    referenceId,
 		CreateTime: time.Now().Unix(),
@@ -130,7 +130,7 @@ func (*CreemAdaptor) RequestPay(c *gin.Context, req *CreemPayRequest) {
 		return
 	}
 
-	log.Printf("Creem订单创建成功 - 用户ID: %d, 订单号: %s, 产品: %s, 充值额度: %d, 支付金额: %.2f",
+	log.Printf("Creem订单创建成功 - 用户ID: %d, 订单号: %s, 产品: %s, 添加预算: %d, 支付金额: %.2f",
 		id, referenceId, selectedProduct.Name, selectedProduct.Quota, selectedProduct.Price)
 
 	c.JSON(200, gin.H{
@@ -329,13 +329,13 @@ func handleCheckoutCompleted(c *gin.Context, event *CreemWebhookEvent) {
 	// 查询本地订单确认存在
 	topUp := model.GetTopUpByTradeNo(referenceId)
 	if topUp == nil {
-		log.Printf("Creem充值订单不存在: %s", referenceId)
+		log.Printf("Creem添加预算订单不存在: %s", referenceId)
 		c.AbortWithStatus(http.StatusBadRequest)
 		return
 	}
 
 	if topUp.Status != common.TopUpStatusPending {
-		log.Printf("Creem充值订单状态错误: %s, 当前状态: %s", referenceId, topUp.Status)
+		log.Printf("Creem添加预算订单状态错误: %s, 当前状态: %s", referenceId, topUp.Status)
 		c.Status(http.StatusOK) // 已处理过的订单，返回成功避免重复处理
 		return
 	}
@@ -359,7 +359,7 @@ func handleCheckoutCompleted(c *gin.Context, event *CreemWebhookEvent) {
 		return
 	}
 
-	log.Printf("Creem充值成功 - 订单号: %s, 充值额度: %d, 支付金额: %.2f",
+	log.Printf("Creem添加预算成功 - 订单号: %s, 添加预算: %d, 支付金额: %.2f",
 		referenceId, topUp.Amount, topUp.Money)
 	c.Status(http.StatusOK)
 }
@@ -462,4 +462,5 @@ func genCreemLink(referenceId string, product *CreemProduct, email string, usern
 	log.Printf("Creem 支付链接创建成功 - 订单号: %s, 支付链接: %s", referenceId, checkoutResp.CheckoutUrl)
 	return checkoutResp.CheckoutUrl, nil
 }
+
 

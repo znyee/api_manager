@@ -113,7 +113,7 @@ func RequestWaffoPay(c *gin.Context) {
 	}
 	waffoMinTopup := int64(setting.WaffoMinTopUp)
 	if req.Amount < waffoMinTopup {
-		c.JSON(200, gin.H{"message": "error", "data": fmt.Sprintf("充值数量不能小于 %d", waffoMinTopup)})
+		c.JSON(200, gin.H{"message": "error", "data": fmt.Sprintf("添加预算金额不能小于 %d", waffoMinTopup)})
 		return
 	}
 
@@ -159,7 +159,7 @@ func RequestWaffoPay(c *gin.Context) {
 	group, _ := model.GetUserGroup(id, true)
 	payMoney := getWaffoPayMoney(float64(req.Amount), group)
 	if payMoney < 0.01 {
-		c.JSON(200, gin.H{"message": "error", "data": "充值金额过低"})
+		c.JSON(200, gin.H{"message": "error", "data": "预算金额过低"})
 		return
 	}
 
@@ -363,7 +363,7 @@ func handleWaffoPayment(c *gin.Context, wh *core.WebhookHandler, result *core.Pa
 		return
 	}
 
-	log.Printf("Waffo 充值成功 - 订单: %s", merchantOrderId)
+	log.Printf("Waffo 添加预算成功 - 订单: %s", merchantOrderId)
 	sendWaffoWebhookResponse(c, wh, true, "")
 }
 
@@ -378,4 +378,5 @@ func sendWaffoWebhookResponse(c *gin.Context, wh *core.WebhookHandler, success b
 	c.Header("X-SIGNATURE", sig)
 	c.Data(http.StatusOK, "application/json", []byte(body))
 }
+
 

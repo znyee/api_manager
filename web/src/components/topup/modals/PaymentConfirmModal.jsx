@@ -30,7 +30,7 @@ const PaymentConfirmModal = ({
       title={
         <div className='flex items-center'>
           <CreditCard className='mr-2' size={18} />
-          {t('充值确认')}
+          {t('添加预算确认')}
         </div>
       }
       visible={open}
@@ -46,7 +46,7 @@ const PaymentConfirmModal = ({
           <div className='space-y-3'>
             <div className='flex justify-between items-center'>
               <Text strong className='text-slate-700 dark:text-slate-200'>
-                {t('充值数量')}：
+                {t('添加预算金额')}：
               </Text>
               <Text className='text-slate-900 dark:text-slate-100'>
                 {renderQuotaWithAmount(topUpCount)}
@@ -189,4 +189,3 @@ const PaymentConfirmModal = ({
 };
 
 export default PaymentConfirmModal;
-

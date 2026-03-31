@@ -141,7 +141,7 @@ func AdminCreateSubscriptionPlan(c *gin.Context) {
 		return
 	}
 	if req.Plan.TotalAmount < 0 {
-		common.ApiErrorMsg(c, "总额度不能为负数")
+		common.ApiErrorMsg(c, "总预算不能为负数")
 		return
 	}
 	req.Plan.UpgradeGroup = strings.TrimSpace(req.Plan.UpgradeGroup)
@@ -204,7 +204,7 @@ func AdminUpdateSubscriptionPlan(c *gin.Context) {
 		return
 	}
 	if req.Plan.TotalAmount < 0 {
-		common.ApiErrorMsg(c, "总额度不能为负数")
+		common.ApiErrorMsg(c, "总预算不能为负数")
 		return
 	}
 	req.Plan.UpgradeGroup = strings.TrimSpace(req.Plan.UpgradeGroup)
@@ -381,4 +381,5 @@ func AdminDeleteUserSubscription(c *gin.Context) {
 	}
 	common.ApiSuccess(c, nil)
 }
+
 

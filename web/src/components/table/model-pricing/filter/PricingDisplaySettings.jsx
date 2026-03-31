@@ -42,8 +42,8 @@ const PricingDisplaySettings = ({
   ];
 
   const currencyItems = [
-    { value: 'USD', label: 'USD ($)' },
-    { value: 'CNY', label: 'CNY (¥)' },
+    { value: 'CNY', label: '人民币 (¥)' },
+    { value: 'USD', label: '美元 ($)' },
     { value: 'CUSTOM', label: t('自定义货币') },
   ];
 
@@ -102,4 +102,3 @@ const PricingDisplaySettings = ({
 };
 
 export default PricingDisplaySettings;
-

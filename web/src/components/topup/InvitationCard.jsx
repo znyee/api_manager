@@ -69,7 +69,7 @@ const InvitationCard = ({
                     className='!rounded-lg'
                   >
                     <Zap size={12} className='mr-1' />
-                    {t('划转到余额')}
+                    {t('转入预算')}
                   </Button>
                 </div>
 
@@ -190,7 +190,7 @@ const InvitationCard = ({
             <div className='flex items-start gap-2'>
               <Badge dot type='success' />
               <Text type='tertiary' className='text-sm'>
-                {t('通过划转功能将奖励额度转入到您的账户余额中')}
+                {t('通过划转功能将奖励预算转入到您的账户预算中')}
               </Text>
             </div>
 
@@ -208,4 +208,3 @@ const InvitationCard = ({
 };
 
 export default InvitationCard;
-

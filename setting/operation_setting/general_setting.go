@@ -25,7 +25,7 @@ type GeneralSetting struct {
 var generalSetting = GeneralSetting{
 	PingIntervalEnabled:        false,
 	PingIntervalSeconds:        60,
-	QuotaDisplayType:           QuotaDisplayTypeUSD,
+	QuotaDisplayType:           QuotaDisplayTypeCNY,
 	CustomCurrencySymbol:       "¤",
 	CustomCurrencyExchangeRate: 1.0,
 }

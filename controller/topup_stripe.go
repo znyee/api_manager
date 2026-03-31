@@ -48,7 +48,7 @@ type StripeAdaptor struct {
 
 func (*StripeAdaptor) RequestAmount(c *gin.Context, req *StripePayRequest) {
 	if req.Amount < getStripeMinTopup() {
-		c.JSON(200, gin.H{"message": "error", "data": fmt.Sprintf("充值数量不能小于 %d", getStripeMinTopup())})
+		c.JSON(200, gin.H{"message": "error", "data": fmt.Sprintf("添加预算金额不能小于 %d", getStripeMinTopup())})
 		return
 	}
 	id := c.GetInt("id")
@@ -59,7 +59,7 @@ func (*StripeAdaptor) RequestAmount(c *gin.Context, req *StripePayRequest) {
 	}
 	payMoney := getStripePayMoney(float64(req.Amount), group)
 	if payMoney <= 0.01 {
-		c.JSON(200, gin.H{"message": "error", "data": "充值金额过低"})
+		c.JSON(200, gin.H{"message": "error", "data": "预算金额过低"})
 		return
 	}
 	c.JSON(200, gin.H{"message": "success", "data": strconv.FormatFloat(payMoney, 'f', 2, 64)})
@@ -71,7 +71,7 @@ func (*StripeAdaptor) RequestPay(c *gin.Context, req *StripePayRequest) {
 		return
 	}
 	if req.Amount < getStripeMinTopup() {
-		c.JSON(200, gin.H{"message": fmt.Sprintf("充值数量不能小于 %d", getStripeMinTopup()), "data": 10})
+		c.JSON(200, gin.H{"message": fmt.Sprintf("添加预算金额不能小于 %d", getStripeMinTopup()), "data": 10})
 		return
 	}
 	if req.Amount > 10000 {
@@ -238,12 +238,12 @@ func sessionExpired(event stripe.Event) {
 
 	topUp := model.GetTopUpByTradeNo(referenceId)
 	if topUp == nil {
-		log.Println("充值订单不存在", referenceId)
+		log.Println("添加预算订单不存在", referenceId)
 		return
 	}
 
 	if topUp.Status != common.TopUpStatusPending {
-		log.Println("充值订单状态错误", referenceId)
+		log.Println("添加预算订单状态错误", referenceId)
 	}
 
 	topUp.Status = common.TopUpStatusExpired
@@ -352,4 +352,5 @@ func getStripeMinTopup() int64 {
 	}
 	return int64(minTopup)
 }
+
 

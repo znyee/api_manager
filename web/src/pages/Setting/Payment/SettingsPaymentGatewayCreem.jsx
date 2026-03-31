@@ -36,7 +36,7 @@ export default function SettingsPaymentGatewayCreem(props) {
     productId: '',
     price: 0,
     quota: 0,
-    currency: 'USD',
+    currency: 'CNY',
   });
   const formApiRef = useRef(null);
 
@@ -130,7 +130,7 @@ export default function SettingsPaymentGatewayCreem(props) {
         productId: '',
         price: 0,
         quota: 0,
-        currency: 'USD',
+        currency: 'CNY',
       });
     }
     setShowProductModal(true);
@@ -144,7 +144,7 @@ export default function SettingsPaymentGatewayCreem(props) {
       productId: '',
       price: 0,
       quota: 0,
-      currency: 'USD',
+      currency: 'CNY',
     });
   };
 
@@ -203,10 +203,10 @@ export default function SettingsPaymentGatewayCreem(props) {
       dataIndex: 'price',
       key: 'price',
       render: (price, record) =>
-        `${record.currency === 'EUR' ? '€' : '$'}${price}`,
+        `${record.currency === 'EUR' ? '€' : '¥'}${price}`,
     },
     {
-      title: t('充值额度'),
+      title: t('添加预算'),
       dataIndex: 'quota',
       key: 'quota',
     },
@@ -359,14 +359,14 @@ export default function SettingsPaymentGatewayCreem(props) {
               size='large'
               className='w-full'
             >
-              <Select.Option value='USD'>{t('USD (美元)')}</Select.Option>
+              <Select.Option value='CNY'>{t('人民币 (¥)')}</Select.Option>
               <Select.Option value='EUR'>{t('EUR (欧元)')}</Select.Option>
             </Select>
           </div>
           <div>
             <Text strong className='block mb-2'>
               {t('价格')} (
-              {productForm.currency === 'EUR' ? t('欧元') : t('美元')})
+              {productForm.currency === 'EUR' ? t('欧元') : t('人民币')})
             </Text>
             <InputNumber
               value={productForm.price}
@@ -383,7 +383,7 @@ export default function SettingsPaymentGatewayCreem(props) {
           </div>
           <div>
             <Text strong className='block mb-2'>
-              {t('充值额度')}
+              {t('添加预算')}
             </Text>
             <InputNumber
               value={productForm.quota}

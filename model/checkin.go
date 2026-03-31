@@ -100,10 +100,10 @@ func userCheckinWithTransaction(checkin *Checkin, userId int, quotaAwarded int) 
 			return errors.New("签到失败，请稍后重试")
 		}
 
-		// 步骤2: 在事务中增加用户额度
+		// 步骤2: 在事务中增加用户预算
 		if err := tx.Model(&User{}).Where("id = ?", userId).
 			Update("quota", gorm.Expr("quota + ?", quotaAwarded)).Error; err != nil {
-			return errors.New("签到失败：更新额度出错")
+			return errors.New("签到失败：更新预算出错")
 		}
 
 		return nil
@@ -129,12 +129,12 @@ func userCheckinWithoutTransaction(checkin *Checkin, userId int, quotaAwarded in
 		return nil, errors.New("签到失败，请稍后重试")
 	}
 
-	// 步骤2: 增加用户额度
+	// 步骤2: 增加用户预算
 	// 使用 db=true 强制直接写入数据库，不使用批量更新
 	if err := IncreaseUserQuota(userId, quotaAwarded, true); err != nil {
 		// 如果增加额度失败，需要回滚签到记录
 		DB.Delete(checkin)
-		return nil, errors.New("签到失败：更新额度出错")
+		return nil, errors.New("签到失败：更新预算出错")
 	}
 
 	return checkin, nil
@@ -177,4 +177,5 @@ func GetUserCheckinStats(userId int, month string) (map[string]interface{}, erro
 		"records":          checkinRecords,  // 本月签到记录详情（不含id和user_id）
 	}, nil
 }
+
 

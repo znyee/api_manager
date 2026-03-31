@@ -61,7 +61,7 @@ func DoCheckin(c *gin.Context) {
 		})
 		return
 	}
-	model.RecordLog(userId, model.LogTypeSystem, fmt.Sprintf("用户签到，获得额度 %s", logger.LogQuota(checkin.QuotaAwarded)))
+	model.RecordLog(userId, model.LogTypeSystem, fmt.Sprintf("用户签到，获得预算 %s", logger.LogQuota(checkin.QuotaAwarded)))
 	c.JSON(http.StatusOK, gin.H{
 		"success": true,
 		"message": "签到成功",
@@ -70,4 +70,5 @@ func DoCheckin(c *gin.Context) {
 			"checkin_date":  checkin.CheckinDate},
 	})
 }
+
 

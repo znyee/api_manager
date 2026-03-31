@@ -26,7 +26,7 @@ export default function GeneralSettings(props) {
   const [showQuotaWarning, setShowQuotaWarning] = useState(false);
   const [inputs, setInputs] = useState({
     TopUpLink: '',
-    'general_setting.quota_display_type': 'USD',
+    'general_setting.quota_display_type': 'CNY',
     'general_setting.custom_currency_symbol': '¤',
     'general_setting.custom_currency_exchange_rate': '',
     QuotaPerUnit: '',
@@ -82,11 +82,11 @@ export default function GeneralSettings(props) {
       });
   }
 
-  // 计算展示在输入框中的“1 USD = X <currency>”中的 X
+  // 计算展示在输入框中的汇率输入值
   const combinedRate = useMemo(() => {
     const type = inputs['general_setting.quota_display_type'];
-    if (type === 'USD') return '1';
     if (type === 'CNY') return String(inputs['USDExchangeRate'] || '');
+    if (type === 'USD') return '1';
     if (type === 'TOKENS') return String(inputs['QuotaPerUnit'] || '');
     if (type === 'CUSTOM')
       return String(
@@ -120,7 +120,7 @@ export default function GeneralSettings(props) {
     ) {
       currentInputs['general_setting.quota_display_type'] = props.options
         .DisplayInCurrencyEnabled
-        ? 'USD'
+        ? 'CNY'
         : 'TOKENS';
     }
     // 回填自定义货币相关字段（如果后端已存在）
@@ -170,12 +170,12 @@ export default function GeneralSettings(props) {
                   showClear
                 />
               </Col>
-              {/* 单位美元额度已合入汇率组合控件（TOKENS 模式下编辑），不再单独展示 */}
+              {/* 单位预算已合入汇率组合控件（TOKENS 模式下编辑），不再单独展示 */}
               <Col xs={24} sm={12} md={8} lg={8} xl={8}>
-                <Form.Slot label={t('站点额度展示类型及汇率')}>
+                <Form.Slot label={t('站点预算展示类型及汇率')}>
                   <InputGroup style={{ width: '100%' }}>
                     <Input
-                      prefix={'1 USD = '}
+                      prefix={''}
                       style={{ width: '50%' }}
                       value={combinedRate}
                       onChange={onCombinedRateChange}
@@ -190,8 +190,8 @@ export default function GeneralSettings(props) {
                         'general_setting.quota_display_type',
                       )}
                     >
-                      <Select.Option value='USD'>USD ($)</Select.Option>
-                      <Select.Option value='CNY'>CNY (¥)</Select.Option>
+                      <Select.Option value='CNY'>{t('人民币 (¥)')}</Select.Option>
+                      <Select.Option value='USD'>{t('美元 ($)')}</Select.Option>
                       <Select.Option value='TOKENS'>Tokens</Select.Option>
                       <Select.Option value='CUSTOM'>
                         {t('自定义货币')}

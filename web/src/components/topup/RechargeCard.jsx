@@ -136,7 +136,7 @@ const RechargeCard = ({
                         fontSize: '12px',
                       }}
                     >
-                      {t('当前余额')}
+                      {t('当前预算')}
                     </Text>
                   </div>
                 </div>
@@ -211,10 +211,10 @@ const RechargeCard = ({
                   <Col xs={24} sm={24} md={24} lg={10} xl={10}>
                     <Form.InputNumber
                       field='topUpCount'
-                      label={t('充值数量')}
+                      label={t('添加预算金额')}
                       disabled={!enableOnlineTopUp && !enableStripeTopUp && !enableWaffoTopUp}
                       placeholder={
-                        t('充值数量，最低 ') + renderQuotaWithAmount(minTopUp)
+                        t('添加预算金额，最低 ') + renderQuotaWithAmount(minTopUp)
                       }
                       value={topUpCount}
                       min={minTopUp}
@@ -338,23 +338,7 @@ const RechargeCard = ({
                 <Form.Slot
                   label={
                     <div className='flex items-center gap-2'>
-                      <span>{t('选择充值额度')}</span>
-                      {(() => {
-                        const { symbol, rate, type } = getCurrencyConfig();
-                        if (type === 'USD') return null;
-
-                        return (
-                          <span
-                            style={{
-                              color: 'var(--semi-color-text-2)',
-                              fontSize: '12px',
-                              fontWeight: 'normal',
-                            }}
-                          >
-                            (1 $ = {rate.toFixed(2)} {symbol})
-                          </span>
-                        );
-                      })()}
+                      <span>{t('选择预算金额')}</span>
                     </div>
                   }
                 >
@@ -510,10 +494,10 @@ const RechargeCard = ({
                           {product.name}
                         </div>
                         <div className='text-sm text-gray-600 mb-2'>
-                          {t('充值额度')}: {product.quota}
+                          {t('添加预算')}: {product.quota}
                         </div>
                         <div className='text-lg font-semibold text-blue-600'>
-                          {product.currency === 'EUR' ? '€' : '$'}
+                          {product.currency === 'EUR' ? '€' : '¥'}
                           {product.price}
                         </div>
                       </Card>
@@ -545,9 +529,9 @@ const RechargeCard = ({
           </Avatar>
           <div>
             <Typography.Text className='text-lg font-medium'>
-              {t('账户充值')}
+              {t('预算管理')}
             </Typography.Text>
-            <div className='text-xs'>{t('多种充值方式，安全便捷')}</div>
+            <div className='text-xs'>{t('多种添加预算方式，安全便捷')}</div>
           </div>
         </div>
         <Button
@@ -592,7 +576,7 @@ const RechargeCard = ({
             tab={
               <div className='flex items-center gap-2'>
                 <Wallet size={16} />
-                {t('额度充值')}
+                {t('添加预算')}
               </div>
             }
             itemKey='topup'

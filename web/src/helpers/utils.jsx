@@ -596,7 +596,7 @@ export const calculateModelPrice = ({
   tokenUnit,
   displayPrice,
   currency,
-  quotaDisplayType = 'USD',
+  quotaDisplayType = 'CNY',
   precision = 4,
 }) => {
   // 1. 选择实际使用的分组
@@ -745,7 +745,7 @@ export const calculateModelPrice = ({
 export const getModelPriceItems = (
   priceData,
   t,
-  quotaDisplayType = 'USD',
+  quotaDisplayType = 'CNY',
 ) => {
   if (priceData.isPerToken) {
     if (quotaDisplayType === 'TOKENS' || priceData.isTokensDisplay) {
@@ -856,7 +856,7 @@ export const getModelPriceItems = (
 };
 
 // 格式化价格信息（用于卡片视图）
-export const formatPriceInfo = (priceData, t, quotaDisplayType = 'USD') => {
+export const formatPriceInfo = (priceData, t, quotaDisplayType = 'CNY') => {
   const items = getModelPriceItems(priceData, t, quotaDisplayType);
   return (
     <>
@@ -923,7 +923,7 @@ export const createCardProPagination = ({
 const DEFAULT_PRICING_FILTERS = {
   search: '',
   showWithRecharge: false,
-  currency: 'USD',
+  currency: 'CNY',
   showRatio: false,
   viewMode: 'card',
   tokenUnit: 'M',
@@ -963,5 +963,3 @@ export const resetPricingFilters = ({
   setFilterTag?.(DEFAULT_PRICING_FILTERS.filterTag);
   setCurrentPage?.(DEFAULT_PRICING_FILTERS.currentPage);
 };
-
-

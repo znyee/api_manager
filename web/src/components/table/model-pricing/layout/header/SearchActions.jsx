@@ -91,8 +91,8 @@ const SearchActions = memo(
                 value={currency}
                 onChange={setCurrency}
                 optionList={[
-                  { value: 'USD', label: 'USD' },
-                  { value: 'CNY', label: 'CNY' },
+                  { value: 'CNY', label: t('人民币') },
+                  { value: 'USD', label: t('美元') },
                   { value: 'CUSTOM', label: t('自定义货币') },
                 ]}
               />
@@ -142,4 +142,3 @@ const SearchActions = memo(
 SearchActions.displayName = 'SearchActions';
 
 export default SearchActions;
-

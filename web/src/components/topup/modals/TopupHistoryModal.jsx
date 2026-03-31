@@ -156,7 +156,7 @@ const TopupHistoryModal = ({ visible, onCancel, t }) => {
         render: renderPaymentMethod,
       },
       {
-        title: t('充值额度'),
+        title: t('添加预算'),
         dataIndex: 'amount',
         key: 'amount',
         render: (amount, record) => {
@@ -226,7 +226,7 @@ const TopupHistoryModal = ({ visible, onCancel, t }) => {
 
   return (
     <Modal
-      title={t('充值账单')}
+      title={t('预算添加记录')}
       visible={visible}
       onCancel={onCancel}
       footer={null}
@@ -262,7 +262,7 @@ const TopupHistoryModal = ({ visible, onCancel, t }) => {
             darkModeImage={
               <IllustrationNoResultDark style={{ width: 150, height: 150 }} />
             }
-            description={t('暂无充值记录')}
+            description={t('暂无预算添加记录')}
             style={{ padding: 30 }}
           />
         }
@@ -272,4 +272,3 @@ const TopupHistoryModal = ({ visible, onCancel, t }) => {
 };
 
 export default TopupHistoryModal;
-

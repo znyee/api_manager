@@ -18,7 +18,7 @@ const TransferModal = ({
       title={
         <div className='flex items-center'>
           <CreditCard className='mr-2' size={18} />
-          {t('划转邀请额度')}
+          {t('划转邀请预算')}
         </div>
       }
       visible={openTransfer}
@@ -30,7 +30,7 @@ const TransferModal = ({
       <div className='space-y-4'>
         <div>
           <Typography.Text strong className='block mb-2'>
-            {t('可用邀请额度')}
+            {t('可用邀请预算')}
           </Typography.Text>
           <Input
             value={renderQuota(userState?.user?.aff_quota)}
@@ -40,7 +40,7 @@ const TransferModal = ({
         </div>
         <div>
           <Typography.Text strong className='block mb-2'>
-            {t('划转额度')} · {t('最低') + renderQuota(getQuotaPerUnit())}
+            {t('划转预算')} · {t('最低') + renderQuota(getQuotaPerUnit())}
           </Typography.Text>
           <InputNumber
             min={getQuotaPerUnit()}
@@ -56,4 +56,3 @@ const TransferModal = ({
 };
 
 export default TransferModal;
-

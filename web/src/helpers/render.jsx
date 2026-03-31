@@ -972,7 +972,7 @@ export function renderQuotaNumberWithDigit(num, digits = 2) {
   if (typeof num !== 'number' || isNaN(num)) {
     return 0;
   }
-  const quotaDisplayType = localStorage.getItem('quota_display_type') || 'USD';
+  const quotaDisplayType = localStorage.getItem('quota_display_type') || 'CNY';
   num = num.toFixed(digits);
   if (quotaDisplayType === 'CNY') {
     return '¥' + num;
@@ -1042,7 +1042,7 @@ export function getQuotaWithUnit(quota, digits = 6) {
 }
 
 export function renderQuotaWithAmount(amount) {
-  const quotaDisplayType = localStorage.getItem('quota_display_type') || 'USD';
+  const quotaDisplayType = localStorage.getItem('quota_display_type') || 'CNY';
   if (quotaDisplayType === 'TOKENS') {
     return renderNumber(renderUnitWithQuota(amount));
   }
@@ -1065,7 +1065,7 @@ export function renderQuotaWithAmount(amount) {
     } catch (e) {}
     return symbol + formattedAmount;
   }
-  return '$' + formattedAmount;
+  return '¥' + formattedAmount;
 }
 
 /**
@@ -1073,11 +1073,11 @@ export function renderQuotaWithAmount(amount) {
  * @returns {Object} - { symbol, rate, type }
  */
 export function getCurrencyConfig() {
-  const quotaDisplayType = localStorage.getItem('quota_display_type') || 'USD';
+  const quotaDisplayType = localStorage.getItem('quota_display_type') || 'CNY';
   const statusStr = localStorage.getItem('status');
 
-  let symbol = '$';
-  let rate = 1;
+  let symbol = '¥';
+  let rate = 7;
 
   if (quotaDisplayType === 'CNY') {
     symbol = '¥';
@@ -1114,13 +1114,13 @@ export function convertUSDToCurrency(usdAmount, digits = 2) {
 
 export function renderQuota(quota, digits = 2) {
   let quotaPerUnit = localStorage.getItem('quota_per_unit');
-  const quotaDisplayType = localStorage.getItem('quota_display_type') || 'USD';
+  const quotaDisplayType = localStorage.getItem('quota_display_type') || 'CNY';
   quotaPerUnit = parseFloat(quotaPerUnit);
   if (quotaDisplayType === 'TOKENS') {
     return renderNumber(quota);
   }
   const resultUSD = quota / quotaPerUnit;
-  let symbol = '$';
+  let symbol = '¥';
   let value = resultUSD;
   if (quotaDisplayType === 'CNY') {
     const statusStr = localStorage.getItem('status');
@@ -1146,6 +1146,8 @@ export function renderQuota(quota, digits = 2) {
     } catch (e) {}
     value = resultUSD * rate;
     symbol = symbolCustom;
+  } else if (quotaDisplayType === 'USD') {
+    symbol = '$';
   }
   const fixedResult = value.toFixed(digits);
   if (parseFloat(fixedResult) === 0 && quota > 0 && value > 0) {
@@ -1180,7 +1182,7 @@ function getEffectiveRatio(groupRatio, user_group_ratio) {
 }
 
 function getQuotaDisplayType() {
-  return localStorage.getItem('quota_display_type') || 'USD';
+  return localStorage.getItem('quota_display_type') || 'CNY';
 }
 
 function resolveBillingDisplayMode(displayMode, modelPrice = -1) {
@@ -2506,7 +2508,7 @@ export function renderAudioModelPrice(
 }
 
 export function renderQuotaWithPrompt(quota, digits) {
-  const quotaDisplayType = localStorage.getItem('quota_display_type') || 'USD';
+  const quotaDisplayType = localStorage.getItem('quota_display_type') || 'CNY';
   if (quotaDisplayType !== 'TOKENS') {
     return i18next.t('等价金额：') + renderQuota(quota, digits);
   }
@@ -3147,4 +3149,3 @@ export function rehypeSplitWordsIntoSpans(options = {}) {
     });
   };
 }
-
