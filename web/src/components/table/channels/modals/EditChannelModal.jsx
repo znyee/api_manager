@@ -339,8 +339,6 @@ const EditChannelModal = (props) => {
       };
     }
   }, [inputs.param_override, t]);
-  const [isIonetChannel, setIsIonetChannel] = useState(false);
-  const [ionetMetadata, setIonetMetadata] = useState(null);
   const [codexOAuthModalVisible, setCodexOAuthModalVisible] = useState(false);
   const [codexCredentialRefreshing, setCodexCredentialRefreshing] =
     useState(false);
@@ -357,20 +355,6 @@ const EditChannelModal = (props) => {
   const [show2FAVerifyModal, setShow2FAVerifyModal] = useState(false);
   const [verifyCode, setVerifyCode] = useState('');
 
-  useEffect(() => {
-    if (!isEdit) {
-      setIsIonetChannel(false);
-      setIonetMetadata(null);
-    }
-  }, [isEdit]);
-
-  const handleOpenIonetDeployment = () => {
-    if (!ionetMetadata?.deployment_id) {
-      return;
-    }
-    const targetUrl = `/console/deployment?deployment_id=${ionetMetadata.deployment_id}`;
-    window.open(targetUrl, '_blank', 'noopener');
-  };
   const [verifyLoading, setVerifyLoading] = useState(false);
   const statusCodeRiskConfirmResolverRef = useRef(null);
   const [statusCodeRiskConfirmVisible, setStatusCodeRiskConfirmVisible] =
@@ -519,16 +503,9 @@ const EditChannelModal = (props) => {
     handleInputChange('settings', settingsJson);
   };
 
-  const isIonetLocked = isIonetChannel && isEdit;
+  const isIonetLocked = false;
 
   const handleInputChange = (name, value) => {
-    if (
-      isIonetChannel &&
-      isEdit &&
-      ['type', 'key', 'base_url'].includes(name)
-    ) {
-      return;
-    }
     if (formApiRef.current) {
       formApiRef.current.setValue(name, value);
     }
@@ -918,25 +895,6 @@ const EditChannelModal = (props) => {
         .filter(Boolean);
       initialModelMappingRef.current = data.model_mapping || '';
       initialStatusCodeMappingRef.current = data.status_code_mapping || '';
-
-      let parsedIonet = null;
-      if (data.other_info) {
-        try {
-          const maybeMeta = JSON.parse(data.other_info);
-          if (
-            maybeMeta &&
-            typeof maybeMeta === 'object' &&
-            maybeMeta.source === 'ionet'
-          ) {
-            parsedIonet = maybeMeta;
-          }
-        } catch (error) {
-          // ignore parse error
-        }
-      }
-      const managedByIonet = !!parsedIonet;
-      setIsIonetChannel(managedByIonet);
-      setIonetMetadata(parsedIonet);
 
       // Smart expand: auto-open advanced settings if any advanced field has a value
       const hasAdvancedValues =
@@ -2447,31 +2405,6 @@ const EditChannelModal = (props) => {
                       </div>
                     </div>
                   </div>
-
-                    {isIonetChannel && (
-                      <Banner
-                        type='info'
-                        closeIcon={null}
-                        className='mb-4 rounded-xl'
-                        description={t(
-                          '此渠道由 IO.NET 自动同步，类型、密钥和 API 地址已锁定。',
-                        )}
-                      >
-                        <Space>
-                          {ionetMetadata?.deployment_id && (
-                            <Button
-                              size='small'
-                              theme='light'
-                              type='primary'
-                              icon={<IconGlobe />}
-                              onClick={handleOpenIonetDeployment}
-                            >
-                              {t('查看关联部署')}
-                            </Button>
-                          )}
-                        </Space>
-                      </Banner>
-                    )}
 
                     <Form.Select
                       field='type'

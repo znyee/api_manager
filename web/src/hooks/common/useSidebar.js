@@ -29,7 +29,6 @@ export const DEFAULT_ADMIN_CONFIG = {
     enabled: true,
     channel: true,
     models: true,
-    deployment: true,
     user: true,
     subscription: true,
     setting: true,
@@ -279,4 +278,3 @@ export const useSidebar = () => {
     refreshUserConfig,
   };
 };
-
