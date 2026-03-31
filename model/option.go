@@ -63,8 +63,6 @@ func InitOptionMap() {
 	common.OptionMap["SMTPToken"] = ""
 	common.OptionMap["SMTPSSLEnabled"] = strconv.FormatBool(common.SMTPSSLEnabled)
 	common.OptionMap["Notice"] = ""
-	common.OptionMap["About"] = ""
-	common.OptionMap["HomePageContent"] = ""
 	common.OptionMap["Footer"] = common.Footer
 	common.OptionMap["SystemName"] = common.SystemName
 	common.OptionMap["Logo"] = common.Logo
@@ -542,4 +540,3 @@ func handleConfigUpdate(key, value string) bool {
 
 	return true // 已处理
 }
-

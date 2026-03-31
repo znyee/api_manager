@@ -30,14 +30,9 @@ export function setStatusData(data) {
   } else {
     localStorage.removeItem('chat_link2');
   }
-  if (data.docs_link) {
-    localStorage.setItem('docs_link', data.docs_link);
-  } else {
-    localStorage.removeItem('docs_link');
-  }
+  localStorage.removeItem('docs_link');
 }
 
 export function setUserData(data) {
   localStorage.setItem('user', JSON.stringify(data));
 }
-

@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useContext, useMemo } from 'react';
-import { Route, Routes, useLocation, useParams } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation, useParams } from 'react-router-dom';
 import Loading from './components/common/ui/Loading';
 import User from './pages/User';
 import { AuthRedirect, PrivateRoute, AdminRoute } from './helpers';
@@ -29,9 +29,7 @@ import PersonalSetting from './components/settings/PersonalSetting';
 import Setup from './pages/Setup';
 import SetupCheck from './components/layout/SetupCheck';
 
-const Home = lazy(() => import('./pages/Home'));
 const Dashboard = lazy(() => import('./pages/Dashboard'));
-const About = lazy(() => import('./pages/About'));
 const UserAgreement = lazy(() => import('./pages/UserAgreement'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 
@@ -71,11 +69,7 @@ function App() {
       <Routes>
         <Route
           path='/'
-          element={
-            <Suspense fallback={<Loading></Loading>} key={location.pathname}>
-              <Home />
-            </Suspense>
-          }
+          element={<Navigate to='/console' replace />}
         />
         <Route
           path='/setup'
@@ -295,14 +289,6 @@ function App() {
                 <Pricing />
               </Suspense>
             )
-          }
-        />
-        <Route
-          path='/about'
-          element={
-            <Suspense fallback={<Loading></Loading>} key={location.pathname}>
-              <About />
-            </Suspense>
           }
         />
         <Route

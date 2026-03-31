@@ -26,8 +26,6 @@ const OtherSetting = () => {
     SystemName: '',
     Logo: '',
     Footer: '',
-    About: '',
-    HomePageContent: '',
   });
   let [loading, setLoading] = useState(false);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
@@ -58,8 +56,6 @@ const OtherSetting = () => {
     [LEGAL_PRIVACY_POLICY_KEY]: false,
     SystemName: false,
     Logo: false,
-    HomePageContent: false,
-    About: false,
     Footer: false,
     CheckUpdate: false,
   });
@@ -160,38 +156,6 @@ const OtherSetting = () => {
       showError('Logo 更新失败');
     } finally {
       setLoadingInput((loadingInput) => ({ ...loadingInput, Logo: false }));
-    }
-  };
-  // 个性化设置 - 首页内容
-  const submitOption = async (key) => {
-    try {
-      setLoadingInput((loadingInput) => ({
-        ...loadingInput,
-        HomePageContent: true,
-      }));
-      await updateOption(key, inputs[key]);
-      showSuccess('首页内容已更新');
-    } catch (error) {
-      console.error('首页内容更新失败', error);
-      showError('首页内容更新失败');
-    } finally {
-      setLoadingInput((loadingInput) => ({
-        ...loadingInput,
-        HomePageContent: false,
-      }));
-    }
-  };
-  // 个性化设置 - 关于
-  const submitAbout = async () => {
-    try {
-      setLoadingInput((loadingInput) => ({ ...loadingInput, About: true }));
-      await updateOption('About', inputs.About);
-      showSuccess('关于内容已更新');
-    } catch (error) {
-      console.error('关于内容更新失败', error);
-      showError('关于内容更新失败');
-    } finally {
-      setLoadingInput((loadingInput) => ({ ...loadingInput, About: false }));
     }
   };
   // 个性化设置 - 页脚
@@ -424,35 +388,6 @@ const OtherSetting = () => {
               <Button onClick={submitLogo} loading={loadingInput['Logo']}>
                 {t('设置 Logo')}
               </Button>
-              <Form.TextArea
-                label={t('首页内容')}
-                placeholder={t(
-                  '在此输入首页内容，支持 Markdown & HTML 代码，设置后首页的状态信息将不再显示。如果输入的是一个链接，则会使用该链接作为 iframe 的 src 属性，这允许你设置任意网页作为首页',
-                )}
-                field={'HomePageContent'}
-                onChange={handleInputChange}
-                style={{ fontFamily: 'JetBrains Mono, Consolas' }}
-                autosize={{ minRows: 6, maxRows: 12 }}
-              />
-              <Button
-                onClick={() => submitOption('HomePageContent')}
-                loading={loadingInput['HomePageContent']}
-              >
-                {t('设置首页内容')}
-              </Button>
-              <Form.TextArea
-                label={t('关于')}
-                placeholder={t(
-                  '在此输入新的关于内容，支持 Markdown & HTML 代码。如果输入的是一个链接，则会使用该链接作为 iframe 的 src 属性，这允许你设置任意网页作为关于页面',
-                )}
-                field={'About'}
-                onChange={handleInputChange}
-                style={{ fontFamily: 'JetBrains Mono, Consolas' }}
-                autosize={{ minRows: 6, maxRows: 12 }}
-              />
-              <Button onClick={submitAbout} loading={loadingInput['About']}>
-                {t('设置关于')}
-              </Button>
               <Form.Input
                 label={t('页脚')}
                 placeholder={t(
@@ -492,5 +427,4 @@ const OtherSetting = () => {
 };
 
 export default OtherSetting;
-
 

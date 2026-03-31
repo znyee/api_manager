@@ -21,7 +21,6 @@ const OperationSetting = () => {
 
     /* 通用设置 */
     TopUpLink: '',
-    'general_setting.docs_link': '',
     QuotaPerUnit: 0,
     USDExchangeRate: 0,
     RetryTimes: 0,
@@ -141,4 +140,3 @@ const OperationSetting = () => {
 };
 
 export default OperationSetting;
-

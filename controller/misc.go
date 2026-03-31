@@ -69,7 +69,6 @@ func GetStatus(c *gin.Context) {
 		"turnstile_check":             common.TurnstileCheckEnabled,
 		"turnstile_site_key":          common.TurnstileSiteKey,
 		"top_up_link":                 common.TopUpLink,
-		"docs_link":                   operation_setting.GetGeneralSetting().DocsLink,
 		"quota_per_unit":              common.QuotaPerUnit,
 		// 兼容旧前端：保留 display_in_currency，同时提供新的 quota_display_type
 		"display_in_currency":           operation_setting.IsCurrencyDisplay(),
@@ -177,17 +176,6 @@ func GetNotice(c *gin.Context) {
 	return
 }
 
-func GetAbout(c *gin.Context) {
-	common.OptionMapRWMutex.RLock()
-	defer common.OptionMapRWMutex.RUnlock()
-	c.JSON(http.StatusOK, gin.H{
-		"success": true,
-		"message": "",
-		"data":    common.OptionMap["About"],
-	})
-	return
-}
-
 func GetUserAgreement(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"success": true,
@@ -213,17 +201,6 @@ func GetMidjourney(c *gin.Context) {
 		"success": true,
 		"message": "",
 		"data":    common.OptionMap["Midjourney"],
-	})
-	return
-}
-
-func GetHomePageContent(c *gin.Context) {
-	common.OptionMapRWMutex.RLock()
-	defer common.OptionMapRWMutex.RUnlock()
-	c.JSON(http.StatusOK, gin.H{
-		"success": true,
-		"message": "",
-		"data":    common.OptionMap["HomePageContent"],
 	})
 	return
 }
@@ -371,4 +348,3 @@ func ResetPassword(c *gin.Context) {
 	})
 	return
 }
-
