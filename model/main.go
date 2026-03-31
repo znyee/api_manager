@@ -261,7 +261,6 @@ func migrateDB() error {
 		&User{},
 		&PasskeyCredential{},
 		&Option{},
-		&Redemption{},
 		&Ability{},
 		&Log{},
 		&Midjourney{},
@@ -309,7 +308,6 @@ func migrateDBFast() error {
 		{&User{}, "User"},
 		{&PasskeyCredential{}, "PasskeyCredential"},
 		{&Option{}, "Option"},
-		{&Redemption{}, "Redemption"},
 		{&Ability{}, "Ability"},
 		{&Log{}, "Log"},
 		{&Midjourney{}, "Midjourney"},
@@ -702,4 +700,3 @@ func PingDB() error {
 	common.SysLog("Database pinged successfully")
 	return nil
 }
-

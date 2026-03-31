@@ -26,7 +26,6 @@ import {
   Receipt,
   Sparkles,
 } from 'lucide-react';
-import { IconGift } from '@douyinfe/semi-icons';
 import { useMinimumLoadingTime } from '../../hooks/common/useMinimumLoadingTime';
 import { getCurrencyConfig } from '../../helpers/render';
 import SubscriptionPlansCard from './SubscriptionPlansCard';
@@ -57,12 +56,6 @@ const RechargeCard = ({
   preTopUp,
   paymentLoading,
   payWay,
-  redemptionCode,
-  setRedemptionCode,
-  topUp,
-  isSubmitting,
-  topUpLink,
-  openTopUpLink,
   userState,
   renderQuota,
   statusLoading,
@@ -80,7 +73,6 @@ const RechargeCard = ({
   reloadSubscriptionSelf,
 }) => {
   const onlineFormApiRef = useRef(null);
-  const redeemFormApiRef = useRef(null);
   const initialTabSetRef = useRef(false);
   const showAmountSkeleton = useMinimumLoadingTime(amountLoading);
   const [activeTab, setActiveTab] = useState('topup');
@@ -534,66 +526,11 @@ const RechargeCard = ({
         ) : (
           <Banner
             type='info'
-            description={t(
-              '管理员未开启在线充值功能，请联系管理员开启或使用兑换码充值。',
-            )}
+            description={t('管理员未开启在线充值功能，请联系管理员开启。')}
             className='!rounded-xl'
             closeIcon={null}
           />
         )}
-      </Card>
-
-      {/* 兑换码充值 */}
-      <Card
-        className='!rounded-xl w-full'
-        title={
-          <Text type='tertiary' strong>
-            {t('兑换码充值')}
-          </Text>
-        }
-      >
-        <Form
-          getFormApi={(api) => (redeemFormApiRef.current = api)}
-          initValues={{ redemptionCode: redemptionCode }}
-        >
-          <Form.Input
-            field='redemptionCode'
-            noLabel={true}
-            placeholder={t('请输入兑换码')}
-            value={redemptionCode}
-            onChange={(value) => setRedemptionCode(value)}
-            prefix={<IconGift />}
-            suffix={
-              <div className='flex items-center gap-2'>
-                <Button
-                  type='primary'
-                  theme='solid'
-                  onClick={topUp}
-                  loading={isSubmitting}
-                >
-                  {t('兑换额度')}
-                </Button>
-              </div>
-            }
-            showClear
-            style={{ width: '100%' }}
-            extraText={
-              topUpLink && (
-                <Text type='tertiary'>
-                  {t('在找兑换码？')}
-                  <Text
-                    type='secondary'
-                    underline
-                    className='cursor-pointer'
-                    onClick={openTopUpLink}
-                  >
-                    {t('购买兑换码')}
-                  </Text>
-                </Text>
-              )
-            }
-          />
-        </Form>
       </Card>
     </Space>
   );
@@ -671,4 +608,3 @@ const RechargeCard = ({
 };
 
 export default RechargeCard;
-
