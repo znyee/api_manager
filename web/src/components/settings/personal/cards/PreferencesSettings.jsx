@@ -9,12 +9,7 @@ import { normalizeLanguage } from "../../../../i18n/language";
 // Language options with native names
 const languageOptions = [
 	{ value: "zh-CN", label: "简体中文" },
-	{ value: "zh-TW", label: "繁體中文" },
 	{ value: "en", label: "English" },
-	{ value: 'fr', label: 'Français'},
-	{ value: 'ru', label: 'Русский'},
-	{ value: 'ja', label: '日本語'},
-	{ value: "vi", label: "Tiếng Việt" },
 ];
 
 const PreferencesSettings = ({ t }) => {
@@ -161,4 +156,3 @@ const PreferencesSettings = ({ t }) => {
 };
 
 export default PreferencesSettings;
-
