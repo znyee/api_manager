@@ -14,6 +14,8 @@ import { useTranslation } from 'react-i18next';
 import zh_CN from '@douyinfe/semi-ui/lib/es/locale/source/zh_CN';
 import en_GB from '@douyinfe/semi-ui/lib/es/locale/source/en_GB';
 
+window.__API_MANAGER_BUILD__ = '2026-04-01-invite-removed';
+
 function SemiLocaleWrapper({ children }) {
   const { i18n } = useTranslation();
   const semiLocale = React.useMemo(
@@ -46,6 +48,5 @@ root.render(
     </StatusProvider>
   </React.StrictMode>,
 );
-
 
 
